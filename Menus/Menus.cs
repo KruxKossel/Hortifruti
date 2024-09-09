@@ -33,7 +33,8 @@ namespace Hortifruti.Menus
                     switch (option)
                     {
                         case 1:
-                            //
+                            Produto produto = CriarEntidade.CriarProduto();
+                            produtoRouter.Adicionar(produto);
                             break;
                         case 2:
                             //
@@ -340,7 +341,8 @@ namespace Hortifruti.Menus
                     switch (option)
                     {
                         case 1:
-                            //
+                            Fornecedor fornecedor = CriarEntidade.CriarFornecedor();
+                            fornecedorRouter.Adicionar(fornecedor);
                             break;
                         case 2:
                             //

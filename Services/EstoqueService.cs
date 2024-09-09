@@ -13,6 +13,7 @@ namespace Hortifruti.Services
 
         public bool Adicionar(Estoque entidade)
         {
+            
             return _estoqueRepository.Adicionar(entidade);
         }
 

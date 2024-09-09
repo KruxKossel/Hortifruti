@@ -318,7 +318,7 @@ namespace Hortifruti.Menus
 
             while(true)
             {
-                Console.Write("\nDigite o NOME do Cliente: ");
+                Console.Write("\nDigite o NOME do Produto: ");
                 nome = Console.ReadLine();
                 if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
                 {
@@ -333,7 +333,7 @@ namespace Hortifruti.Menus
 
             while (true)
             {
-                Console.Write("\nDigite o PREÇO dos Itens da Venda: ");
+                Console.Write("\nDigite o PREÇO do Produto: ");
                 if (decimal.TryParse(Console.ReadLine(), out preco))
                 {
                     break;

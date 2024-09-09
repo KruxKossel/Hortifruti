@@ -13,7 +13,8 @@ namespace Hortifruti.Services
 
         public bool Adicionar(Fornecedor entidade)
         {
-            return _fornecedorRepository.Adicionar(entidade);
+            bool pessoaAdicionada = _fornecedorRepository.Adicionar(entidade);
+            return pessoaAdicionada;
         }
 
         public List<Fornecedor> Atualizar()
