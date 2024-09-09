@@ -13,20 +13,8 @@ namespace Hortifruti.Services
 
         public bool Adicionar(Cliente entidade)
         {
-            bool pessoaAdicionada = false;
-
-            while(!pessoaAdicionada)
-            {
-                pessoaAdicionada = _clienteRepository.Adicionar(entidade);
-
-                if (!pessoaAdicionada)
-                {
-                    Console.WriteLine("\n\nID já existe. Por favor, insira um ID diferente.\n");
-                }
-
-            }
+            bool pessoaAdicionada = _clienteRepository.Adicionar(entidade);
             return pessoaAdicionada;
-            
         }
 
         public List<Cliente> Atualizar()

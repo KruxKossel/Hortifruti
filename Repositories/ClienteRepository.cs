@@ -20,18 +20,6 @@ namespace Hortifruti.Repositories
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {
-                    // checa id
-                    using (var checkCommand = connection.DbConnection().CreateCommand())
-                    {
-                        checkCommand.CommandText = "SELECT COUNT(1) FROM clientes WHERE id = @id";
-                        checkCommand.Parameters.AddWithValue("@id", entidade.Id);
-
-                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
-                        if (count > 0)
-                        {
-                            return false; // ID já existe
-                        }
-                    }
 
                     // add
                     using (var comando = connection.DbConnection().CreateCommand()){
@@ -45,7 +33,7 @@ namespace Hortifruti.Repositories
 
                     Console.Clear();
                     Console.WriteLine("\nDados inseridos com sucesso!\n\n");
-                    return true; // cliente adicionada com sucesso
+                    return true; // cliente adicionado com sucesso
 
                 }
 

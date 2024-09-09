@@ -35,7 +35,7 @@ namespace Hortifruti.Database.Configurations
                             Id INTEGER PRIMARY KEY,
                             ProdutoId INTEGER,
                             Quantidade INTEGER,
-                            FOREIGN KEY (ProdutoId) REFERENCES Produto(Id)
+                            FOREIGN KEY (ProdutoId) REFERENCES produtos(Id)
                         );
                         CREATE TABLE IF NOT EXISTS fornecedores (
                             Id INTEGER PRIMARY KEY,
@@ -55,22 +55,22 @@ namespace Hortifruti.Database.Configurations
                             ProdutoId INTEGER,
                             Quantidade INTEGER,
                             Preco REAL,
-                            FOREIGN KEY (VendaId) REFERENCES Venda(Id),
-                            FOREIGN KEY (ProdutoId) REFERENCES Produto(Id)
+                            FOREIGN KEY (VendaId) REFERENCES vendas(Id),
+                            FOREIGN KEY (ProdutoId) REFERENCES produtos(Id)
                         );
                         CREATE TABLE IF NOT EXISTS produtos (
                             Id INTEGER PRIMARY KEY,
                             FornecedorId INTEGER,
                             Nome TEXT NOT NULL,
                             Preco REAL,
-                            FOREIGN KEY (FornecedorId) REFERENCES Fornecedor(Id)
+                            FOREIGN KEY (FornecedorId) REFERENCES fornecedores(Id)
                         );
                         CREATE TABLE IF NOT EXISTS vendas (
                             Id INTEGER PRIMARY KEY,
                             ClienteId INTEGER,
                             Data TEXT,
                             Total REAL,
-                            FOREIGN KEY (ClienteId) REFERENCES Cliente(Id)
+                            FOREIGN KEY (ClienteId) REFERENCES clientes(Id)
                         );
                     ";
 

@@ -95,13 +95,16 @@ do
                     Console.WriteLine("Saindo...");
                 break;
             default:
-                    Console.WriteLine("Opção inválida! Tente novamente.");
+                    Console.WriteLine("\n\nOpção inválida! Tente novamente.");
                 break;
         }
     }
     else
     {
-        Console.WriteLine("Entrada inválida! Por favor, insira um número.");
+        Console.WriteLine("\n\nEntrada inválida! Por favor, insira um número.");
+        option = 8;
     }
+    Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
+    Console.ReadKey();
 
 } while (option != 0);

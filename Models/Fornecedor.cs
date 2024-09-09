@@ -12,6 +12,10 @@ namespace Hortifruti.Models
         public string RazaoSocial { get; } = razaoSocial;
         public string Cnpj { get; } = cnpj;
         public string Telefone { get; } = telefone;
-        
+
+        // public Fornecedor(int id, string razaoSocial, string cnpj, string telefone) : this(razaoSocial, cnpj, telefone){
+        //     Id = id;
+        // }
+
     }
 }
