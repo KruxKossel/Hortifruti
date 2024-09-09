@@ -1,8 +1,52 @@
-﻿
+﻿using Hortifruti.Database.Configurations;
+using Hortifruti.Menus;
+using Hortifruti.Repositories;
+using Hortifruti.Routers;
+using Hortifruti.Services;
 
+// =============================== Banco de Dados =============================
+string connectionString = "Data Source=" + DatabaseLocal.DatabasePath;
 
+HortifrutiContext dbManager = new(connectionString);
 
+dbManager.InicializeDatabase();
 
+// ================================== Produtos ==================================
+ProdutoRepository produtoRepository = new(connectionString);
+ProdutoService produtoService= new(produtoRepository);
+ProdutoRouter produtoRouter= new(produtoService);
+
+// ================================== Estoque ==================================
+EstoqueRepository estoqueRepository = new(connectionString);
+EstoqueService estoqueService = new(estoqueRepository);
+EstoqueRouter estoqueRouter = new(estoqueService);
+
+// =================================== Vendas ==================================
+VendaRepository vendaRepository = new(connectionString);
+VendaService vendaService = new(vendaRepository);
+VendaRouter vendaRouter = new(vendaService);
+
+// =============================== Itens de Venda ==================================
+ItensVendaRepository itensVendaRepository = new(connectionString);
+ItensVendaService itensVendaService = new(itensVendaRepository);
+ItensVendaRouter itensVendaRouter = new(itensVendaService);
+
+// ================================== Fornecedores ==================================
+FornecedorRepository fornecedorRepository = new(connectionString);
+FornecedorService fornecedorService = new(fornecedorRepository);
+FornecedorRouter fornecedorRouter = new(fornecedorService);
+
+// ================================== Clientes ==================================
+ClienteRepository clienteRepository = new(connectionString);
+ClienteService clienteService = new(clienteRepository);
+ClienteRouter clienteRouter = new(clienteService);
+
+// ================================== Funcionários ==================================
+FuncionarioRepository funcionarioRepository = new(connectionString);
+FuncionarioService funcionarioService = new(funcionarioRepository);
+FuncionarioRouter funcionarioRouter = new(funcionarioService);
+
+// ================================== Menu ==================================
 int option;
 do
 {
@@ -24,94 +68,43 @@ do
     string input = Console.ReadLine();
     if (int.TryParse(input, out option))
     {
-
-    switch (option)
-    {
-        case 1:
-            //
-            break;
-        case 2:
-            //
-            break;
-        case 3:
-            //
-            break;
-        case 4:
-            //
-            break;
-        case 5:
-            //
-            break;
-        case 6:
-            //
-            break;
-        case 7:
-            //
-            break;
-        case 0:
-            Console.WriteLine("Saindo...");
-            break;
-        default:
-            Console.WriteLine("Opção inválida! Tente novamente.");
-            break;
-    }
-}
-    else
-    {
-        Console.WriteLine("Entrada inválida! Por favor, insira um número.");
-    }
-} while (option != 0);
-
-
-
-
-static void GerenciarProdutos() // exemplo de segundo menu
-{
-int option;
-do
-{
-    Console.Clear();
-    Console.WriteLine("=============================");
-    Console.WriteLine("  Gerenciar Produtos");
-    Console.WriteLine("=============================");
-    Console.WriteLine("1. Adicionar Produto");
-    Console.WriteLine("2. Listar Produtos");
-    Console.WriteLine("3. Atualizar Produto");
-    Console.WriteLine("4. Remover Produto");
-    Console.WriteLine("0. Voltar");
-    Console.WriteLine("=============================");
-    Console.Write("Escolha uma opção: ");
-    
-    string input = Console.ReadLine();
-    if (int.TryParse(input, out option))
-    {
         switch (option)
         {
             case 1:
-                //
+                    Menus.GerenciarProdutos(produtoRouter);
                 break;
             case 2:
-                //
+                    Menus.GerenciarEstoque(estoqueRouter);
                 break;
             case 3:
-                //
+                    Menus.GerenciarVendas(vendaRouter);
                 break;
             case 4:
-                // 
+                    Menus.GerenciarItensdeVenda(itensVendaRouter);
+                break;
+            case 5:
+                    Menus.GerenciarFornecedores(fornecedorRouter);
+                break;
+            case 6:
+                    Menus.GerenciarClientes(clienteRouter);
+                break;
+            case 7:
+                    Menus.GerenciarFuncionarios(funcionarioRouter);
                 break;
             case 0:
-                Console.WriteLine("Voltando ao menu principal...");
+                    Console.WriteLine("Saindo...");
                 break;
             default:
-                Console.WriteLine("Opção inválida! Tente novamente.");
+                    Console.WriteLine("\n\nOpção inválida! Tente novamente.");
                 break;
         }
     }
     else
     {
-        Console.WriteLine("Entrada inválida! Por favor, insira um número.");
+        Console.WriteLine("\n\nEntrada inválida! Por favor, insira um número.");
+        option = 8;
     }
-    Console.WriteLine("Pressione qualquer tecla para continuar...");
+    Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
     Console.ReadKey();
+
 } while (option != 0);
-}

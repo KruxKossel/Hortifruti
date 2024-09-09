@@ -5,8 +5,17 @@ using System.Threading.Tasks;
 
 namespace Hortifruti.Models
 {
-    public class Fornecedor
+    public class Fornecedor(string razaoSocial, string cnpj, string telefone)
     {
-        
+
+        public int Id { get; }
+        public string RazaoSocial { get; } = razaoSocial;
+        public string Cnpj { get; } = cnpj;
+        public string Telefone { get; } = telefone;
+
+        // public Fornecedor(int id, string razaoSocial, string cnpj, string telefone) : this(razaoSocial, cnpj, telefone){
+        //     Id = id;
+        // }
+
     }
 }
