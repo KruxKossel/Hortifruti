@@ -239,16 +239,25 @@ namespace Hortifruti.Menus
                     switch (option)
                     {
                         case 1:
-                            //
+                            Funcionario funcionario = CriarEntidade.CriarFuncionario();
+                            funcionarioRouter.Adicionar(funcionario);
+
                             break;
                         case 2:
-                            //
+                             List<Funcionario> funcionarios = funcionarioRouter.Listar();
+                            
+                            Console.WriteLine("\nFuncionarios cadastrados:");
+                            
+                            foreach (var c in funcionarios){
+                                Console.WriteLine($"\nNome: {c.Nome}\nCPF: {c.Cpf}\nTelefone: {c.Cargo}");
+                            }  
+                            
                             break;
                         case 3:
-                            //
+                            funcionarioRouter.Atualizar();
                             break;
                         case 4:
-                            // 
+                            funcionarioRouter.Remover(null);
                             break;
                         case 0:
                             Console.WriteLine("\n\nVoltando ao menu principal...");
