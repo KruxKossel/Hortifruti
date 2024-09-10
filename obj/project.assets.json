@@ -1530,11 +1530,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Rafael Thomaz\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\muril\\.nuget\\packages\\": {}
+>>>>>>> 6d6646c8d9e8a1d3c379bd4b393dbfccc5391af0
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Rafael Thomaz\\Desktop\\Hortifruti__\\Hortifruti.csproj",
       "projectName": "Hortifruti",
       "projectPath": "C:\\Users\\Rafael Thomaz\\Desktop\\Hortifruti__\\Hortifruti.csproj",
@@ -1543,6 +1548,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rafael Thomaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\Hortifruti.csproj",
+      "projectName": "Hortifruti",
+      "projectPath": "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\Hortifruti.csproj",
+      "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\muril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6d6646c8d9e8a1d3c379bd4b393dbfccc5391af0
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
