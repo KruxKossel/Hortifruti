@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hortifruti.Models;
+using Hortifruti.Repositories;
 using Hortifruti.Routers;
 
 namespace Hortifruti.Menus
@@ -293,13 +294,20 @@ namespace Hortifruti.Menus
                             clienteRouter.Adicionar(cliente);
                             break;
                         case 2:
-                            //
+                        
+                            List<Cliente> clientes = clienteRouter.Listar();
+                            
+                            Console.WriteLine("\nClientes cadastrados:");
+                            
+                            foreach (var c in clientes){
+                                Console.WriteLine($"\nNome: {c.Nome}\nCPF: {c.Cpf}\nTelefone: {c.Telefone}");
+                            }  
                             break;
                         case 3:
-                            //
+                            clienteRouter.Atualizar();
                             break;
                         case 4:
-                            // 
+                            clienteRouter.Remover(null);
                             break;
                         case 0:
                             Console.WriteLine("\n\nVoltando ao menu principal...");
@@ -345,13 +353,22 @@ namespace Hortifruti.Menus
                             fornecedorRouter.Adicionar(fornecedor);
                             break;
                         case 2:
-                            //
+                            List<Fornecedor> fornecedores = fornecedorRouter.Listar();
+                            
+                            Console.WriteLine("\nFornecedores cadastrados:");
+
+                            foreach(var c in fornecedores){
+                                Console.WriteLine($"\nRazao Social: {c.RazaoSocial}\nCNPJ: {c.Cnpj}\nTelefone: {c.Telefone}");
+                            }
                             break;
                         case 3:
-                            //
+                        
+                            
+                            fornecedorRouter.Atualizar();
+
                             break;
                         case 4:
-                            // 
+                            fornecedorRouter.Remover(null); 
                             break;
                         case 0:
                             Console.WriteLine("\n\nVoltando ao menu principal...");
