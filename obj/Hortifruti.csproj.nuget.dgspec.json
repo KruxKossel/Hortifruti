@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj": {}
+    "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\Hortifruti.csproj": {}
   },
   "projects": {
-    "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj": {
+    "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\Hortifruti.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj",
+        "projectUniqueName": "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\Hortifruti.csproj",
         "projectName": "Hortifruti",
-        "projectPath": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj",
-        "packagesPath": "C:\\Users\\ellen\\.nuget\\packages\\",
-        "outputPath": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\obj\\",
+        "projectPath": "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\Hortifruti.csproj",
+        "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\muril\\projects-C#\\Hortifruti__\\Hortifruti__\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ellen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\muril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -71,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
