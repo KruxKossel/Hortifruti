@@ -9,11 +9,6 @@ namespace Hortifruti.Menus
 {
     public class CriarEntidade
     {
-        static readonly Regex regexNome = RegexUtil.MyRegexNome();
-        static readonly Regex regexTelefone = RegexUtil.MyRegexTelefone();
-        static readonly Regex regexCpf = RegexUtil.MyRegexCpf();
-        static readonly Regex regexCnpj = RegexUtil.MyRegexCnpj();
-
         // configurações de aceitação, fazer prevenção de erros
         public static Cliente CriarCliente()
         {
@@ -25,43 +20,31 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o NOME do Cliente: ");
                 nome = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                 if (nome != string.Empty)
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("\n\nNome inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
-                }
-
             }
+                
 
             while(true)
             {
                 Console.Write("\nDigite o CPF do Cliente: ");
                 cpf = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(cpf) && regexCpf.IsMatch(cpf))
+                if (cpf != string.Empty)
                 {
                     break;
-                }
-                else
-                {
-                    Console.WriteLine("\n\nCPF inválido.\nAceita formatos como: 123.456.789-09, 12345678909.\n");
                 }
 
             }
 
-            while(true)
-            {
+            while(true){
+
                 Console.Write("\nDigite o TELEFONE do Cliente: ");
                 telefone = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(telefone) && regexTelefone.IsMatch(telefone))
-                {
+
+                if(telefone != string.Empty){
                     break;
-                }
-                else
-                {
-                    Console.WriteLine("\n\nTelefone inválido.\nAceita formatos como: (11) 91234-5678, 11 91234-5678, 1191234-5678, 91234-5678.\n");
                 }
 
             }
@@ -122,28 +105,19 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite a Razão Social do Fornecedor: ");
                 razaoSocial = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(razaoSocial) && regexNome.IsMatch(razaoSocial))
+                if (razaoSocial != string.Empty)
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("\n\nrazao Social inválida. Por favor, digite um nome sem números ou caracteres especiais.\n");
-                }
-
             }
 
             while(true)
             {
                 Console.Write("\nDigite o CNPJ do Fornecedor: ");
                 cnpj = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(cnpj) && regexCnpj.IsMatch(cnpj))
+                if (cnpj != string.Empty)
                 {
                     break;
-                }
-                else
-                {
-                    Console.WriteLine("\n\nCNPJ inválido.\nAceita formatos como: 12.345.678/0001-95, 12345678000195.\n");
                 }
 
             }
@@ -152,15 +126,10 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o TELEFONE do Fornecedor: ");
                 telefone = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(telefone) && regexTelefone.IsMatch(telefone))
+                if (telefone != string.Empty)
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("\n\nTelefone inválido.\nAceita formatos como: (11) 91234-5678, 11 91234-5678, 1191234-5678, 91234-5678.\n");
-                }
-
             }
 
             Fornecedor fornecedor= new(razaoSocial, cnpj, telefone);
@@ -179,45 +148,30 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o NOME do Funcionario: ");
                 nome = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                if (nome != string.Empty)
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("\n\nNome inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
-                }
-
             }
 
             while(true)
             {
                 Console.Write("\nDigite o CPF do Funcionario: ");
                 cpf = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(cpf) && regexCpf.IsMatch(cpf))
+                if (cpf != string.Empty)
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("\n\nCPF inválido.\nAceita formatos como: 123.456.789-09, 12345678909.\n");
-                }
-
             }
 
             while(true)
             {
                 Console.Write("\nDigite o CARGO do Funcionario: ");
                 cargo = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(cargo) && regexNome.IsMatch(cargo))
+                if (cargo != string.Empty)
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("\n\nCargo inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
-                }
-
             }
 
             Funcionario funcionario = new(nome, cpf, cargo);
@@ -234,7 +188,6 @@ namespace Hortifruti.Menus
 
             while (true)
             {
-
                 Console.Write("\nDigite o ID da Venda: ");
                 if (int.TryParse(Console.ReadLine(), out vendaId))
                 {
@@ -244,12 +197,10 @@ namespace Hortifruti.Menus
                 {
                     Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
                 }
-
             }
 
             while (true)
             {
-
                 Console.Write("\nDigite o ID do Produto: ");
                 if (int.TryParse(Console.ReadLine(), out produtoId))
                 {
@@ -259,12 +210,10 @@ namespace Hortifruti.Menus
                 {
                     Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
                 }
-
             }
 
             while (true)
             {
-
                 Console.Write("\nDigite a QUANTIDADE de Itens da Venda: ");
                 if (int.TryParse(Console.ReadLine(), out quantidade))
                 {
@@ -274,7 +223,6 @@ namespace Hortifruti.Menus
                 {
                     Console.WriteLine("\n\nQuantidade inválida. Por favor, digite um número inteiro.\n");
                 }
-
             }
 
             while (true)
@@ -303,7 +251,6 @@ namespace Hortifruti.Menus
 
             while (true)
             {
-
                 Console.Write("\nDigite o ID do Fornecedor: ");
                 if (int.TryParse(Console.ReadLine(), out fornecedorId))
                 {
@@ -313,22 +260,16 @@ namespace Hortifruti.Menus
                 {
                     Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
                 }
-
             }
 
             while(true)
             {
                 Console.Write("\nDigite o NOME do Produto: ");
                 nome = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                if (nome != string.Empty)
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("\n\nNome inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
-                }
-
             }
 
             while (true)
@@ -348,7 +289,5 @@ namespace Hortifruti.Menus
 
             return produto;
         }
-    
-        
     }
 }
