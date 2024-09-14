@@ -28,7 +28,7 @@ namespace Hortifruti.Repositories
                         var count = Convert.ToInt32(checkCommand.ExecuteScalar());
                         if (count > 0)
                         {
-                            Console.WriteLine($"ID {entidade.FornecedorId} encontrado no banco de dados.");
+                            Console.WriteLine($"\nID {entidade.FornecedorId} encontrado no banco de dados.\n");
                             Console.ReadKey();
                         }
                         else
@@ -77,7 +77,7 @@ namespace Hortifruti.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Remover(Produto entidade)
+        public bool Remover(int id)
         {
             throw new NotImplementedException();
         }

@@ -20,31 +20,41 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o NOME do Cliente: ");
                 nome = Console.ReadLine();
-                 if (nome != string.Empty)
+                if (!string.IsNullOrWhiteSpace(nome))
                 {
                     break;
                 }
+                else
+                {
+                    Console.WriteLine("Nome não pode ser vazio. Por favor, digite um nome válido.");
+                }
             }
                 
-
             while(true)
             {
                 Console.Write("\nDigite o CPF do Cliente: ");
                 cpf = Console.ReadLine();
-                if (cpf != string.Empty)
+                if (!string.IsNullOrWhiteSpace(cpf))
                 {
                     break;
                 }
-
+                else
+                {
+                    Console.WriteLine("CPF não pode ser vazio. Por favor, digite um CPF válido.");
+                }
             }
 
             while(true){
 
                 Console.Write("\nDigite o TELEFONE do Cliente: ");
                 telefone = Console.ReadLine();
-
-                if(telefone != string.Empty){
+                if (!string.IsNullOrWhiteSpace(telefone))
+                {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Telefone não pode ser vazio. Por favor, digite um telefone válido.");
                 }
 
             }
@@ -53,6 +63,8 @@ namespace Hortifruti.Menus
 
             return cliente;
         }
+
+        
 
         public static Estoque CriarEstoque()
         {
@@ -105,9 +117,13 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite a Razão Social do Fornecedor: ");
                 razaoSocial = Console.ReadLine();
-                if (razaoSocial != string.Empty)
+                if (!string.IsNullOrWhiteSpace(razaoSocial))
                 {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Razão Social não pode ser vazio. Por favor, digite uma Razão Social válida.");
                 }
             }
 
@@ -115,9 +131,13 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o CNPJ do Fornecedor: ");
                 cnpj = Console.ReadLine();
-                if (cnpj != string.Empty)
+                if (!string.IsNullOrWhiteSpace(cnpj))
                 {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("CNPJ não pode ser vazio. Por favor, digite um CNPJ válido.");
                 }
 
             }
@@ -126,9 +146,13 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o TELEFONE do Fornecedor: ");
                 telefone = Console.ReadLine();
-                if (telefone != string.Empty)
+                if (!string.IsNullOrWhiteSpace(telefone))
                 {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Telefone não pode ser vazio. Por favor, digite um telefone válido.");
                 }
             }
 
@@ -148,9 +172,13 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o NOME do Funcionario: ");
                 nome = Console.ReadLine();
-                if (nome != string.Empty)
+                if (!string.IsNullOrWhiteSpace(nome))
                 {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Nome não pode ser vazio. Por favor, digite um Nome válido.");
                 }
             }
 
@@ -158,9 +186,13 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o CPF do Funcionario: ");
                 cpf = Console.ReadLine();
-                if (cpf != string.Empty)
+                if (!string.IsNullOrWhiteSpace(cpf))
                 {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("CPF não pode ser vazio. Por favor, digite um CPF válido.");
                 }
             }
 
@@ -168,9 +200,13 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o CARGO do Funcionario: ");
                 cargo = Console.ReadLine();
-                if (cargo != string.Empty)
+                if (!string.IsNullOrWhiteSpace(cargo))
                 {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Cargo não pode ser vazio. Por favor, digite um Cargo válido.");
                 }
             }
 
@@ -266,9 +302,13 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o NOME do Produto: ");
                 nome = Console.ReadLine();
-                if (nome != string.Empty)
+                if (!string.IsNullOrWhiteSpace(nome))
                 {
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Nome não pode ser vazio. Por favor, digite um Nome válido.");
                 }
             }
 

@@ -27,9 +27,13 @@ namespace Hortifruti.Routers
             return _clienteService.Listar();
         }
 
-        public bool Remover(Cliente entidade)
+        public bool Remover(int id)
         {
-            return _clienteService.Remover(entidade);
+            bool pessoaRemovida = _clienteService.Remover(id);
+            if (pessoaRemovida == false){
+                return pessoaRemovida;
+            }
+            return pessoaRemovida;
         }
     }
 }

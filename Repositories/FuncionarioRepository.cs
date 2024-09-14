@@ -148,13 +148,10 @@ namespace Hortifruti.Repositories
         }
 
 
-        public bool Remover(Funcionario entidade)
+        public bool Remover(int id)
         {
            try
             {
-                 Console.WriteLine("Digite o ID do Funcionario a ser removido: ");
-                 int id = int.Parse(Console.ReadLine());
-
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {

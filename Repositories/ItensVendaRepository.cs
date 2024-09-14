@@ -25,7 +25,7 @@ namespace Hortifruti.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Remover(ItensVenda entidade)
+        public bool Remover(int id)
         {
             throw new NotImplementedException();
         }

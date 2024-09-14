@@ -26,9 +26,9 @@ namespace Hortifruti.Services
             return _vendaRepository.Listar();
         }
 
-        public bool Remover(Venda entidade)
+        public bool Remover(int id)
         {
-            return _vendaRepository.Remover(entidade);
+            return _vendaRepository.Remover(id);
         }
     }
 }

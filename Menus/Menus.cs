@@ -47,18 +47,19 @@ namespace Hortifruti.Menus
                             // 
                             break;
                         case 0:
-                            Console.WriteLine("Voltando ao menu principal...");
+                            Console.WriteLine("\nVoltando ao menu principal...");
                             break;
                         default:
-                            Console.WriteLine("Opção inválida! Tente novamente.");
+                            Console.WriteLine("\nOpção inválida! Tente novamente.");
                             break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Entrada inválida! Por favor, insira um número.");
+                    Console.WriteLine("\nEntrada inválida! Por favor, insira um número.");
+                    option = 5;
                 }
-                Console.WriteLine("Pressione qualquer tecla para continuar...");
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
             } while (option != 0);
         }
@@ -98,18 +99,19 @@ namespace Hortifruti.Menus
                             // 
                             break;
                         case 0:
-                            Console.WriteLine("Voltando ao menu principal...");
+                            Console.WriteLine("\nVoltando ao menu principal...");
                             break;
                         default:
-                            Console.WriteLine("Opção inválida! Tente novamente.");
+                            Console.WriteLine("\nOpção inválida! Tente novamente.");
                             break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Entrada inválida! Por favor, insira um número.");
+                    Console.WriteLine("\nEntrada inválida! Por favor, insira um número.");
+                    option = 5;
                 }
-                Console.WriteLine("Pressione qualquer tecla para continuar...");
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
             } while (option != 0);
         }
@@ -149,18 +151,19 @@ namespace Hortifruti.Menus
                             // 
                             break;
                         case 0:
-                            Console.WriteLine("Voltando ao menu principal...");
+                            Console.WriteLine("\nVoltando ao menu principal...");
                             break;
                         default:
-                            Console.WriteLine("Opção inválida! Tente novamente.");
+                            Console.WriteLine("\nOpção inválida! Tente novamente.");
                             break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Entrada inválida! Por favor, insira um número.");
+                    Console.WriteLine("\nEntrada inválida! Por favor, insira um número.");
+                    option = 5;
                 }
-                Console.WriteLine("Pressione qualquer tecla para continuar...");
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
             } while (option != 0);
         }
@@ -200,18 +203,19 @@ namespace Hortifruti.Menus
                             // 
                             break;
                         case 0:
-                            Console.WriteLine("Voltando ao menu principal...");
+                            Console.WriteLine("\nVoltando ao menu principal...");
                             break;
                         default:
-                            Console.WriteLine("Opção inválida! Tente novamente.");
+                            Console.WriteLine("\nOpção inválida! Tente novamente.");
                             break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Entrada inválida! Por favor, insira um número.");
+                    Console.WriteLine("\nEntrada inválida! Por favor, insira um número.");
+                    option = 5;
                 }
-                Console.WriteLine("Pressione qualquer tecla para continuar...");
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
             } while (option != 0);
         }
@@ -257,7 +261,21 @@ namespace Hortifruti.Menus
                             funcionarioRouter.Atualizar();
                             break;
                         case 4:
-                            funcionarioRouter.Remover(null);
+                            int id;
+                            
+                             while (true)
+                            {
+                                Console.WriteLine("Digite o ID do Funcionario a ser removido: ");
+                                if (int.TryParse(Console.ReadLine(), out id))
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                                }
+                            }
+                            funcionarioRouter.Remover(id);
                             break;
                         case 0:
                             Console.WriteLine("\n\nVoltando ao menu principal...");
@@ -270,6 +288,7 @@ namespace Hortifruti.Menus
                 else
                 {
                     Console.WriteLine("\n\nEntrada inválida! Por favor, insira um número.");
+                    option = 5;
                 }
                 Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
@@ -313,10 +332,29 @@ namespace Hortifruti.Menus
                             }  
                             break;
                         case 3:
-                            clienteRouter.Atualizar();
+                            List<Cliente> clienteAtualizado = clienteRouter.Atualizar();
+                            Console.WriteLine("\nClientes atualizados:");
+                            foreach (var c in clienteAtualizado)
+                            {
+                                Console.WriteLine($"\n\nID: {c.Id}, Nome: {c.Nome}, CPF: {c.Cpf}, Telefone: {c.Telefone}\n");
+                            }
                             break;
                         case 4:
-                            clienteRouter.Remover(null);
+                            int id;
+                            
+                             while (true)
+                            {
+                                Console.WriteLine("Digite o ID do Cliente a ser removido: ");
+                                if (int.TryParse(Console.ReadLine(), out id))
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                                }
+                            }
+                            clienteRouter.Remover(id);
                             break;
                         case 0:
                             Console.WriteLine("\n\nVoltando ao menu principal...");
@@ -329,6 +367,7 @@ namespace Hortifruti.Menus
                 else
                 {
                     Console.WriteLine("\n\nEntrada inválida! Por favor, insira um número.");
+                    option = 5;
                 }
                 Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
@@ -377,7 +416,21 @@ namespace Hortifruti.Menus
 
                             break;
                         case 4:
-                            fornecedorRouter.Remover(null); 
+                            int id;
+                            
+                             while (true)
+                            {
+                                Console.WriteLine("Digite o ID do Fornecedor a ser removido: ");
+                                if (int.TryParse(Console.ReadLine(), out id))
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                                }
+                            }
+                            fornecedorRouter.Remover(id); 
                             break;
                         case 0:
                             Console.WriteLine("\n\nVoltando ao menu principal...");
@@ -390,6 +443,7 @@ namespace Hortifruti.Menus
                 else
                 {
                     Console.WriteLine("\n\nEntrada inválida! Por favor, insira um número.");
+                    option = 5;
                 }
                 Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
