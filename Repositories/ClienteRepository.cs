@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Threading.Tasks;
 using Hortifruti.Database.Configurations;
+using Hortifruti.Menus;
 using Hortifruti.Models;
 
 namespace Hortifruti.Repositories
@@ -15,6 +16,12 @@ namespace Hortifruti.Repositories
 
         public bool Adicionar(Cliente entidade)
         {
+            if (string.IsNullOrWhiteSpace(entidade.Nome))
+            {
+                Console.WriteLine("Erro: Nome do cliente não pode ser vazio.");
+                return false;
+            }
+
             try
             {
                 var connection = new HortifrutiContext(_connectionString);
@@ -53,19 +60,17 @@ namespace Hortifruti.Repositories
 
         public List<Cliente> Atualizar()
         {
-           List<Cliente> cliente = new List<Cliente>();
+            
+           List<Cliente> clienteAtualizado = [];
 
-            Console.WriteLine("Digite o id:");
-            int id = int.Parse(Console.ReadLine());
+           var (entidade, id) = AtualizarEntidade.AtualizarCliente();
 
-            Console.WriteLine("Digite a nova Nome:");
-            string nome = Console.ReadLine();
 
-            Console.WriteLine("Digite o novo CPF:");
-            string cpf = Console.ReadLine();
-
-            Console.WriteLine("Digite o novo telefone:");
-            string telefone = Console.ReadLine();
+           if (string.IsNullOrWhiteSpace(entidade.Nome))
+            {
+                Console.WriteLine("Erro: Nome do cliente não pode ser vazio.");
+                return clienteAtualizado;
+            }
 
             try
             {
@@ -76,14 +81,15 @@ namespace Hortifruti.Repositories
                     {
                         comando.CommandText = "UPDATE clientes SET Nome = @nome, CPF = @cpf, Telefone = @telefone WHERE Id = @id";
                         comando.Parameters.AddWithValue("@id", id);
-                        comando.Parameters.AddWithValue("@nome", nome);
-                        comando.Parameters.AddWithValue("@cpf", cpf);
-                        comando.Parameters.AddWithValue("@telefone", telefone);
+                        comando.Parameters.AddWithValue("@nome", entidade.Nome);
+                        comando.Parameters.AddWithValue("@cpf", entidade.Cpf);
+                        comando.Parameters.AddWithValue("@telefone", entidade.Telefone);
 
                         int linhasAfetadas = comando.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
                         {
                             Console.WriteLine("Dados atualizados com sucesso");
+                            clienteAtualizado.Add(entidade);
                         }
                         else
                         {
@@ -100,10 +106,8 @@ namespace Hortifruti.Repositories
             {
                 Console.WriteLine("Erro geral: " + ex.Message);
             }
-            return cliente;
+            return clienteAtualizado;
         }
-
-        
 
         public List<Cliente> Listar()
         {
@@ -144,28 +148,45 @@ namespace Hortifruti.Repositories
             return clientes;
         }
 
-        public bool Remover(Cliente entidade)
+        public bool Remover(int id)
         {
           try
             {
-                 Console.WriteLine("Digite o ID do Cliente a ser removido: ");
-                 int id = int.Parse(Console.ReadLine());
 
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {
+                    // checa id
+                    using (var checkCommand = connection.DbConnection().CreateCommand())
+                    {
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM clientes WHERE id = @id";
+                        checkCommand.Parameters.AddWithValue("@id", id);
+
+                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\n\nID {id} não existe. \n");
+                            return false;
+                        }
+                    }
+
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
                         comando.CommandText = "DELETE FROM clientes WHERE Id = @id ";
-                        comando.Parameters.AddWithValue("@id",id);
+                        comando.Parameters.AddWithValue("@id", id);
 
                         int linhasAfetadas = comando.ExecuteNonQuery();
 
                         if(linhasAfetadas>0){
-                            Console.WriteLine("Cliente removido com sucesso!");
+                            Console.WriteLine("\nCliente removido com sucesso!");
                             return true;
                         }else{
-                            Console.WriteLine("Cliente não encontrado");
+                            Console.WriteLine("\nCliente não encontrado");
                             return false;
                         }
                     }

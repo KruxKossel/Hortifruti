@@ -7,7 +7,7 @@ using Hortifruti.Menus;
 
 namespace Hortifruti.Models
 {
-    public class Funcionario(string nome, string cpf, string cargo) : Pessoa(nome, cpf)
+    public class Funcionario(string nome, string cpf) : Pessoa(nome, cpf)
     {
         static readonly Regex regexNome = RegexUtil.MyRegexNome();
         public int Id { get;}
@@ -18,9 +18,9 @@ namespace Hortifruti.Models
             get => _cargo; 
             set
             {
-                if (!string.IsNullOrWhiteSpace(cargo) && regexNome.IsMatch(cargo))
+                if (!string.IsNullOrWhiteSpace(value) && regexNome.IsMatch(value))
                 {
-                    this._cargo = cargo;
+                    this._cargo = value;
                 }
                 else
                 {
@@ -28,6 +28,12 @@ namespace Hortifruti.Models
                     this._cargo = string.Empty;
                 }
             } 
+        }
+
+
+        public Funcionario(string nome, string cpf, string cargo ) : this(nome, cpf){
+
+            this.Cargo = cargo;
         }
     }
 }

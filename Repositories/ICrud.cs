@@ -10,6 +10,6 @@ namespace Hortifruti.Repositories
         public bool Adicionar(T entidade);
         public List<T> Listar();
         public List<T> Atualizar();
-        public bool Remover(T entidade);
+        public bool Remover(int id);
     }
 }

@@ -7,7 +7,7 @@ using Hortifruti.Menus;
 
 namespace Hortifruti.Models
 {
-    public class Fornecedor(string razaoSocial, string cnpj, string telefone)
+    public class Fornecedor
     {
 
         static readonly Regex regexTelefone = RegexUtil.MyRegexTelefone();
@@ -22,9 +22,9 @@ namespace Hortifruti.Models
             get => _razaoSocial;
             set
             {
-                if (!string.IsNullOrWhiteSpace(razaoSocial) && regexNome.IsMatch(razaoSocial))
+                if (!string.IsNullOrWhiteSpace(value) && regexNome.IsMatch(value))
                 {
-                    this._razaoSocial = razaoSocial;
+                    this._razaoSocial = value;
                 }
                 else
                 {
@@ -40,9 +40,9 @@ namespace Hortifruti.Models
             get => _cnpj;
             set 
             {
-                if (!string.IsNullOrWhiteSpace(cnpj) && regexCnpj.IsMatch(cnpj))
+                if (!string.IsNullOrWhiteSpace(value) && regexCnpj.IsMatch(value))
                 {
-                    this._cnpj = cnpj;
+                    this._cnpj = value;
                 }
                 else
                 {
@@ -58,9 +58,9 @@ namespace Hortifruti.Models
             get => _telefone;
             set 
             {    
-                if (!string.IsNullOrWhiteSpace(telefone) && regexTelefone.IsMatch(telefone))
+                if (!string.IsNullOrWhiteSpace(value) && regexTelefone.IsMatch(value))
                 {
-                    this._telefone = telefone;
+                    this._telefone = value;
                 }
                 else
                 {
@@ -69,5 +69,13 @@ namespace Hortifruti.Models
                 }
             } 
         } 
+
+
+        public Fornecedor(string razaoSocial, string cnpj,  string telefone){
+
+            RazaoSocial = razaoSocial;
+            Cnpj = cnpj;
+            Telefone = telefone;
+        }
     }
 }

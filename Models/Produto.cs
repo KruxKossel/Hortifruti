@@ -7,7 +7,7 @@ using Hortifruti.Menus;
 
 namespace Hortifruti.Models
 {
-    public class Produto(int fornecedorId, string nome, decimal preco)
+    public class Produto(int fornecedorId, decimal preco)
     {
 
         static readonly Regex regexNome = RegexUtil.MyRegexNome();
@@ -21,9 +21,9 @@ namespace Hortifruti.Models
             get => _nome;
             set 
             {
-                 if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                 if (!string.IsNullOrWhiteSpace(value) && regexNome.IsMatch(value))
                 {
-                    this._nome = nome;
+                    this._nome = value;
                 }
                 else
                 {
@@ -34,5 +34,10 @@ namespace Hortifruti.Models
      
         }
         public decimal Preco { get; } = preco;
+
+        public Produto(int fornecedorId, string nome,  decimal preco) : this(fornecedorId, preco){
+
+            this.Nome = nome;
+        }
     }
 }

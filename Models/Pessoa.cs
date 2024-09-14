@@ -7,27 +7,27 @@ using Hortifruti.Menus;
 
 namespace Hortifruti.Models
 {
-    public class Pessoa(string nome, string cpf)
+    public class Pessoa
     {
         static readonly Regex regexCpf = RegexUtil.MyRegexCpf();
         static readonly Regex regexNome = RegexUtil.MyRegexNome();
 
         private string _nome;
-        public string Nome 
-        { 
+        public string Nome
+        {
             get => _nome;
             set
             {
-                if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                if (!string.IsNullOrWhiteSpace(value) && regexNome.IsMatch(value))
                 {
-                    this._nome = nome;
+                    this._nome = value;
                 }
                 else
                 {
                     Console.WriteLine("\n\nNome inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
                     this._nome = string.Empty;
                 }
-            } 
+            }
         }
 
         private string _cpf;
@@ -36,9 +36,9 @@ namespace Hortifruti.Models
             get => _cpf;
             set 
             {
-                if (!string.IsNullOrWhiteSpace(cpf) && regexCpf.IsMatch(cpf))
+                if (!string.IsNullOrWhiteSpace(value) && regexCpf.IsMatch(value))
                 {
-                    this._cpf = cpf;
+                    this._cpf = value;
                 }
                 else
                 {
@@ -46,7 +46,13 @@ namespace Hortifruti.Models
                     this._cpf = string.Empty;
                 }
             }
-        } 
+        }
+
+        public Pessoa(string nome, string cpf){
+
+            this.Nome = nome;
+            this.Cpf = cpf;
+        }
         
     }
 }

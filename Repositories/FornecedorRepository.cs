@@ -142,13 +142,10 @@ namespace Hortifruti.Repositories
             return fornecedor;
         }
 
-        public bool Remover(Fornecedor entidade)
+        public bool Remover(int id)
         {
             try
             {
-                 Console.WriteLine("Digite o ID do Fornecedor a ser removido: ");
-                 int id = int.Parse(Console.ReadLine());
-
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {
