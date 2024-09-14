@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Hortifruti
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\Rafael Thomaz\Desktop\Hortifruti__\
+=======
 build_property.ProjectDir = C:\Users\muril\projects-C#\Hortifruti__\Hortifruti__\
+>>>>>>> 6d6646c8d9e8a1d3c379bd4b393dbfccc5391af0
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
