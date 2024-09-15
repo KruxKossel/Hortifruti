@@ -1530,24 +1530,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ellen\\.nuget\\packages\\": {}
+    "C:\\Users\\Rafael Thomaz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael Thomaz\\Desktop\\Hortifruti\\Hortifruti.csproj",
       "projectName": "Hortifruti",
-      "projectPath": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj",
-      "packagesPath": "C:\\Users\\ellen\\.nuget\\packages\\",
-      "outputPath": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\obj\\",
+      "projectPath": "C:\\Users\\Rafael Thomaz\\Desktop\\Hortifruti\\Hortifruti.csproj",
+      "packagesPath": "C:\\Users\\Rafael Thomaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafael Thomaz\\Desktop\\Hortifruti\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ellen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Rafael Thomaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1560,6 +1563,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1599,16 +1607,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

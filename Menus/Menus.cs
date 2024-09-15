@@ -38,13 +38,35 @@ namespace Hortifruti.Menus
                             produtoRouter.Adicionar(produto);
                             break;
                         case 2:
-                            //
+                            List<Produto> produtos = produtoRouter.Listar();
+                            
+                            Console.WriteLine("\nFuncionarios cadastrados:");
+                            
+                            foreach (var c in produtos){
+                                Console.WriteLine($"\nFornecedor ID: {c.FornecedorId}\nCPF: {c.Nome}\nTelefone: {c.Preco}");
+                            }  
+                            
                             break;
                         case 3:
                             //
                             break;
                         case 4:
-                            // 
+                             int id;
+                            
+                             while (true)
+
+                            {
+                                Console.WriteLine("Digite o ID do Produto a ser removido: ");
+                                if (int.TryParse(Console.ReadLine(), out id))
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                                }
+                            }
+                            produtoRouter.Remover(id); 
                             break;
                         case 0:
                             Console.WriteLine("\nVoltando ao menu principal...");
