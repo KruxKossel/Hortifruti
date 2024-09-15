@@ -25,7 +25,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nTelefone inválido.\nAceita formatos como: (11) 91234-5678, 11 91234-5678, 1191234-5678, 91234-5678.\n");
                     this._telefone = string.Empty;
                 }
             }

@@ -24,7 +24,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nCargo inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
                     this._cargo = string.Empty;
                 }
             } 

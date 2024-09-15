@@ -24,7 +24,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nNome inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
                     this._nome = string.Empty;
                 }
             }
@@ -42,7 +41,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nCPF inválido.\nAceita formatos como: 123.456.789-09, 12345678909.\n");
                     this._cpf = string.Empty;
                 }
             }

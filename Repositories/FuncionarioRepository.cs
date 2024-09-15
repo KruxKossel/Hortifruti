@@ -18,6 +18,17 @@ namespace Hortifruti.Repositories
         {
             try
             {
+
+                if (string.IsNullOrWhiteSpace(entidade.Nome))
+                {
+                    Console.WriteLine("Erro: Nome do funcionário não pode ser vazio.");
+                    return false;
+                }
+                 if (string.IsNullOrWhiteSpace(entidade.Cpf))
+                {
+                    Console.WriteLine("Erro: CPF do funcionário não pode ser vazio.");
+                    return false;
+                }
                 
                 
                 var connection = new HortifrutiContext(_connectionString);
@@ -58,19 +69,20 @@ namespace Hortifruti.Repositories
 
         public List<Funcionario> Atualizar()
         {
-           List<Funcionario> funcionario = new List<Funcionario>();
+           List<Funcionario> funcionarioAtualizado = new List<Funcionario>();
 
-            Console.WriteLine("Digite o id:");
-            int id = int.Parse(Console.ReadLine());
+            var (funcionario, id) = AtualizarEntidade.AtualizarFuncionario();
 
-            Console.WriteLine("Digite o novo nome:");
-            string nome = Console.ReadLine();
-
-            Console.WriteLine("Digite o novo cpf:");
-            string cpf = Console.ReadLine();
-
-            Console.WriteLine("Digite o novo cargo:");
-            string cargo = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(funcionario.Nome))
+                {
+                    Console.WriteLine("Erro: Nome do funcionário não pode ser vazio.");
+                    return funcionarioAtualizado;
+                }
+                 if (string.IsNullOrWhiteSpace(funcionario.Cpf))
+                {
+                    Console.WriteLine("Erro: CPF do funcionário não pode ser vazio.");
+                    return funcionarioAtualizado;
+                }
 
             try
             {
@@ -81,14 +93,15 @@ namespace Hortifruti.Repositories
                     {
                         comando.CommandText = "UPDATE funcionarios SET Nome = @nome, CPF = @cpf, Cargo = @cargo WHERE Id = @id";
                         comando.Parameters.AddWithValue("@id", id);
-                        comando.Parameters.AddWithValue("@nome",nome);
-                        comando.Parameters.AddWithValue("@cpf", cpf );
-                        comando.Parameters.AddWithValue("@cargo",cargo);
+                        comando.Parameters.AddWithValue("@nome",funcionario.Nome);
+                        comando.Parameters.AddWithValue("@cpf", funcionario.Cpf );
+                        comando.Parameters.AddWithValue("@cargo",funcionario.Cargo);
 
                         int linhasAfetadas = comando.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
                         {
                             Console.WriteLine("Dados atualizados com sucesso");
+                            funcionarioAtualizado.Add(funcionario);
                         }
                         else
                         {
@@ -105,7 +118,7 @@ namespace Hortifruti.Repositories
             {
                 Console.WriteLine("Erro geral: " + ex.Message);
             }
-            return funcionario;
+            return funcionarioAtualizado;
         }
 
         public List<Funcionario> Listar()

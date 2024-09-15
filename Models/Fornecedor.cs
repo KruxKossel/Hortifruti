@@ -28,7 +28,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nrazao Social inválida. Por favor, digite um nome sem números ou caracteres especiais.\n");
                     this._razaoSocial = string.Empty;
                 }
             } 
@@ -46,7 +45,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nCNPJ inválido.\nAceita formatos como: 12.345.678/0001-95, 12345678000195.\n");
                     this._cnpj = string.Empty;
                 }
             }
@@ -64,7 +62,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nTelefone inválido.\nAceita formatos como: (11) 91234-5678, 11 91234-5678, 1191234-5678, 91234-5678.\n");
                     this._telefone = string.Empty;
                 }
             } 
