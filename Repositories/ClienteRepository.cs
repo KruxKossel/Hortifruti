@@ -77,6 +77,26 @@ namespace Hortifruti.Repositories
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {
+
+                    // checa id
+                    using (var checkCommand = connection.DbConnection().CreateCommand())
+                    {
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM clientes WHERE id = @id";
+                        checkCommand.Parameters.AddWithValue("@id", id);
+
+                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\n\nID {id} não existe. \n");
+                            return clienteAtualizado;
+                        }
+                    }
+
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
                         comando.CommandText = "UPDATE clientes SET Nome = @nome, CPF = @cpf, Telefone = @telefone WHERE Id = @id";
@@ -124,11 +144,11 @@ namespace Hortifruti.Repositories
                         {
                             while (leitor.Read())
                             {
-                                Cliente cliente = new Cliente(
-                                    leitor["Nome"].ToString(),
-                                    leitor["Cpf"].ToString(),
-                                    leitor["Telefone"].ToString()
-                                );
+                                string nome = leitor["Nome"] != DBNull.Value ? leitor["Nome"].ToString() : string.Empty;
+                                string cpf = leitor["Cpf"] != DBNull.Value ? leitor["Cpf"].ToString() : string.Empty;
+                                string telefone = leitor["Telefone"] != DBNull.Value ? leitor["Telefone"].ToString() : string.Empty;
+
+                                Cliente cliente = new(nome, cpf, telefone);
                                 clientes.Add(cliente);
                             }
                         }

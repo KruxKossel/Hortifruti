@@ -14,6 +14,18 @@ namespace Hortifruti.Repositories
         private readonly string _connectionString = connectionString;
         public bool Adicionar(Fornecedor entidade)
         {
+            if (string.IsNullOrWhiteSpace(entidade.RazaoSocial))
+            {
+                Console.WriteLine("Erro: Razao Social do fornecedor não pode ser vazia.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(entidade.Cnpj))
+            {
+                Console.WriteLine("Erro: CNPJ do fornecedor não pode ser vazio.");
+                return false;
+            }
+
             try
             {
                 var connection = new HortifrutiContext(_connectionString);
@@ -32,7 +44,7 @@ namespace Hortifruti.Repositories
 
                     Console.Clear();
                     Console.WriteLine("\nDados inseridos com sucesso!\n\n");
-                    return true; // cliente adicionado com sucesso
+                    return true; // fornecedor adicionado com sucesso
 
                 }
 
@@ -51,19 +63,21 @@ namespace Hortifruti.Repositories
 
       public List<Fornecedor> Atualizar()
         {
-            List<Fornecedor> fornecedor = new List<Fornecedor>();
+            List<Fornecedor> fornecedorAtualizado = new List<Fornecedor>();
 
-            Console.WriteLine("Digite o id:");
-            int id = int.Parse(Console.ReadLine());
+            var (fornecedor, id) = AtualizarEntidade.AtualizarFornecedor();
 
-            Console.WriteLine("Digite a nova razão social:");
-            string razaoSocial = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(fornecedor.RazaoSocial))
+            {
+                Console.WriteLine("Erro: Razao Social do fornecedor não pode ser vazia.");
+                return fornecedorAtualizado;
+            }
 
-            Console.WriteLine("Digite o novo CNPJ:");
-            string cnpj = Console.ReadLine();
-
-            Console.WriteLine("Digite o novo telefone:");
-            string telefone = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(fornecedor.Cnpj))
+            {
+                Console.WriteLine("Erro: CNPJ do fornecedor não pode ser vazio.");
+                return fornecedorAtualizado;
+            }
 
             try
             {
@@ -74,14 +88,15 @@ namespace Hortifruti.Repositories
                     {
                         comando.CommandText = "UPDATE fornecedores SET Razao_Social = @razao_social, CNPJ = @cnpj, Telefone = @telefone WHERE Id = @id";
                         comando.Parameters.AddWithValue("@id", id);
-                        comando.Parameters.AddWithValue("@razao_social", razaoSocial);
-                        comando.Parameters.AddWithValue("@cnpj", cnpj);
-                        comando.Parameters.AddWithValue("@telefone", telefone);
+                        comando.Parameters.AddWithValue("@razao_social", fornecedor.RazaoSocial);
+                        comando.Parameters.AddWithValue("@cnpj", fornecedor.Cnpj);
+                        comando.Parameters.AddWithValue("@telefone", fornecedor.Telefone);
 
                         int linhasAfetadas = comando.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
                         {
                             Console.WriteLine("Dados atualizados com sucesso");
+                            fornecedorAtualizado.Add(fornecedor);
                         }
                         else
                         {
@@ -98,10 +113,8 @@ namespace Hortifruti.Repositories
             {
                 Console.WriteLine("Erro geral: " + ex.Message);
             }
-            return fornecedor;
+            return fornecedorAtualizado;
         }
-
-
                 
 
         public List<Fornecedor> Listar()
@@ -119,11 +132,11 @@ namespace Hortifruti.Repositories
                         {
                             while (leitor.Read())
                             {
-                                Fornecedor fornecedores = new Fornecedor(
-                                    leitor["Razao_Social"].ToString(),
-                                    leitor["CNPJ"].ToString(),
-                                    leitor["Telefone"].ToString()
-                                );
+                                string razaoSocial = leitor["Razao_Social"] != DBNull.Value ? leitor["Razao_Social"].ToString() : string.Empty;
+                                string cnpj = leitor["CNPJ"] != DBNull.Value ? leitor["CNPJ"].ToString() : string.Empty;
+                                string telefone = leitor["Telefone"] != DBNull.Value ? leitor["Telefone"].ToString() : string.Empty;
+
+                                Fornecedor fornecedores = new(razaoSocial, cnpj, telefone);
                                 fornecedor.Add(fornecedores);
                             }
                         }

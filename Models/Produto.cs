@@ -27,7 +27,6 @@ namespace Hortifruti.Models
                 }
                 else
                 {
-                    Console.WriteLine("\n\nNome inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
                     this._nome = string.Empty;
                 }
             }
