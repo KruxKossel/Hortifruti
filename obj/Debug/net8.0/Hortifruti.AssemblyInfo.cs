@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hortifruti")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a9af2761f2fce206b5fb29a74bc7d7789ecaa8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8441a85aa83834970db2d493c8f22aa54bab4e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hortifruti")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hortifruti")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

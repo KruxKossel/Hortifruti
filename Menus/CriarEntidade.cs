@@ -348,5 +348,28 @@ namespace Hortifruti.Menus
 
             return produto;
         }
+        
+        public static Venda CriarVenda(){
+            int ClienteId;
+            DateTime  Data;
+            decimal Total;
+            while (true)
+            {
+                Console.Write("\nDigite o ID do Cliente: ");
+                if (int.TryParse(Console.ReadLine(), out ClienteId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+
+            }
+            Total=0;
+            Data = DateTime.Now;
+            Venda venda = new Venda(ClienteId,Data,Total);
+            return venda;
+        }
     }
 }
