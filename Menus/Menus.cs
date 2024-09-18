@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Hortifruti.Models;
 using Hortifruti.Repositories;
@@ -161,16 +162,34 @@ namespace Hortifruti.Menus
                     switch (option)
                     {
                         case 1:
-                            //
+                            ItensVenda itensVenda = CriarEntidade.CriarItensVenda();
+                            itensVendaRouter.Adicionar(itensVenda);
                             break;
                         case 2:
-                            //
+                            List<ItensVenda> itensVendas = itensVendaRouter.Listar();
+                            Console.WriteLine("Itens da venda:");
+                            foreach(var iv in itensVendas){
+                            Console.WriteLine($"\nId do Produto: {iv.ProdutoId}\nId da venda: {iv.VendaId}\nQuantidade: {iv.Quantidade}\nPreco: {iv.Preco}");
+                            }                        
                             break;
                         case 3:
-                            //
+                            itensVendaRouter.Atualizar();
                             break;
                         case 4:
-                            // 
+                            int id;
+                            while (true)
+                            {
+                                Console.WriteLine("Digite o ID da venda a ser removido: ");
+                                if (int.TryParse(Console.ReadLine(), out id))
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                                }
+                            }
+                            itensVendaRouter.Remover(id);
                             break;
                         case 0:
                             Console.WriteLine("\nVoltando ao menu principal...");
@@ -213,16 +232,34 @@ namespace Hortifruti.Menus
                     switch (option)
                     {
                         case 1:
-                            //
+                            Venda venda = CriarEntidade.CriarVenda();
+                            vendaRouter.Adicionar(venda);
                             break;
                         case 2:
-                            //
+                            List<Venda> vendas = vendaRouter.Listar();
+                            Console.WriteLine("Vendas:");
+                            foreach(var Venda in vendas){
+                                Console.WriteLine($"\nCLiente Id: {Venda.ClienteId}\n Data: {Venda.Data}\n Total: {Venda.Total}");
+                            }
                             break;
                         case 3:
-                            //
+                            vendaRouter.Atualizar();
                             break;
                         case 4:
-                            // 
+                            int id;
+                            while (true)
+                            {
+                                Console.WriteLine("Digite o ID da venda a ser removido: ");
+                                if (int.TryParse(Console.ReadLine(), out id))
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                                }
+                            }
+                            vendaRouter.Remover(id);
                             break;
                         case 0:
                             Console.WriteLine("\nVoltando ao menu principal...");
