@@ -149,6 +149,7 @@ namespace Hortifruti.Repositories
                         {
                             while (leitor.Read())
                             {
+                            int id = leitor["Id"] != DBNull.Value ? Convert.ToInt32(leitor["Id"]) : 0;
                             int VendaId = leitor["VendaId"] != DBNull.Value ? Convert.ToInt32(leitor["VendaId"]) : 0;
                             int ProdutoId = leitor["ProdutoId"] != DBNull.Value ? Convert.ToInt32(leitor["ProdutoId"]) : 0;
                             int Quantidade = leitor["Quantidade"] != DBNull.Value ? Convert.ToInt32(leitor["Quantidade"]) : 0;

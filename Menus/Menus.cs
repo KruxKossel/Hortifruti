@@ -169,7 +169,7 @@ namespace Hortifruti.Menus
                             List<ItensVenda> itensVendas = itensVendaRouter.Listar();
                             Console.WriteLine("Itens da venda:");
                             foreach(var iv in itensVendas){
-                            Console.WriteLine($"\nId dos itens: {iv.Id}\nId do Produto: {iv.ProdutoId}\nId da venda: {iv.VendaId}\nQuantidade: {iv.Quantidade}\nPreco: {iv.Preco}");
+                            Console.WriteLine($"\nId do Produto: {iv.ProdutoId}\nId da venda: {iv.VendaId}\nQuantidade: {iv.Quantidade}\nPreco: {iv.Preco}");
                             }                        
                             break;
                         case 3:
@@ -239,7 +239,7 @@ namespace Hortifruti.Menus
                             List<Venda> vendas = vendaRouter.Listar();
                             Console.WriteLine("Vendas:");
                             foreach(var Venda in vendas){
-                                Console.WriteLine($"\nId da venda {Venda.Id}\nCLiente Id: {Venda.ClienteId}\n Data: {Venda.Data}\n Telefone: {Venda.Total}");
+                                Console.WriteLine($"\nCLiente Id: {Venda.ClienteId}\n Data: {Venda.Data}\n Total: {Venda.Total}");
                             }
                             break;
                         case 3:

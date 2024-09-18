@@ -62,24 +62,24 @@ namespace Hortifruti.Repositories
                 using (connection.DbConnection())
                 {
 
-                    // checa id
-                    // using (var checkCommand = connection.DbConnection().CreateCommand())
-                    // {
-                    //     checkCommand.CommandText = "SELECT COUNT(1) FROM vendas WHERE id = @id";
-                    //     checkCommand.Parameters.AddWithValue("@id", id);
+                   // checa id
+                    using (var checkCommand = connection.DbConnection().CreateCommand())
+                    {
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM vendas WHERE Id = @id";
+                        checkCommand.Parameters.AddWithValue("@id", id);
 
-                    //     var count = Convert.ToInt32(checkCommand.ExecuteScalar());
-                    //     if (count > 0)
-                    //     {
-                    //         Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
-                    //         Console.ReadKey();
-                    //     }
-                    //     else
-                    //     {
-                    //         Console.WriteLine($"\n\nID {id} não existe. \n");
-                    //         return VendasAtt;
-                    //     }
-                    // }
+                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\n\nID {id} não existe. \n");
+                            return VendasAtt;
+                        }
+                    }
 
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
@@ -128,6 +128,7 @@ namespace Hortifruti.Repositories
                         {
                             while (leitor.Read())
                             {
+                            int id = leitor["Id"] != DBNull.Value ? Convert.ToInt32(leitor["Id"]) : 0;
                             int clienteId = leitor["ClienteId"] != DBNull.Value ? Convert.ToInt32(leitor["ClienteId"]) : 0;
                             DateTime data = leitor["Data"] != DBNull.Value ? Convert.ToDateTime(leitor["Data"]) : DateTime.MinValue;
                             decimal total = leitor["Total"] != DBNull.Value ? Convert.ToDecimal(leitor["Total"]) : 0.0m;
@@ -163,7 +164,7 @@ namespace Hortifruti.Repositories
                     // checa id
                     using (var checkCommand = connection.DbConnection().CreateCommand())
                     {
-                        checkCommand.CommandText = "SELECT COUNT(1) FROM vendas WHERE id = @id";
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM vendas WHERE Id = @id";
                         checkCommand.Parameters.AddWithValue("@id", id);
 
                         var count = Convert.ToInt32(checkCommand.ExecuteScalar());
