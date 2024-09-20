@@ -211,7 +211,94 @@ namespace Hortifruti.Menus
             return (funcionario, id);
         }
 
-        
+        public static (Venda, int) AtualizarVenda(){
+
+            int id = CriarId();
+            int ClienteId;
+            DateTime  Data = DateTime.Now;
+            decimal Total=0;
+
+           while (true)
+            {
+                Console.Write("\nDigite o novo Id do cliente: ");
+                if (int.TryParse(Console.ReadLine(), out ClienteId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+
+            }
+
+            Venda venda= new(ClienteId, Data,Total);
+
+            return (venda, id);
+        }
+        public static (ItensVenda, int) AtualizarItensVenda(){
+
+            int id = CriarId();
+            int vendaId;
+            int produtoId;
+            int quantidade;
+            decimal preco;
+
+            while (true)
+            {
+                Console.Write("\nDigite o ID da Venda: ");
+                if (int.TryParse(Console.ReadLine(), out vendaId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+            }
+
+            while (true)
+            {
+                Console.Write("\nDigite o ID do Produto: ");
+                if (int.TryParse(Console.ReadLine(), out produtoId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+            }
+
+            while (true)
+            {
+                Console.Write("\nDigite a QUANTIDADE de Itens da Venda: ");
+                if (int.TryParse(Console.ReadLine(), out quantidade))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nQuantidade inválida. Por favor, digite um número inteiro.\n");
+                }
+            }
+
+            while (true)
+            {
+                Console.Write("\nDigite o PREÇO dos Itens da Venda: ");
+                if (decimal.TryParse(Console.ReadLine(), out preco))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nValor inválido. Por favor, digite um número decimal.\n");
+                }
+            }
+
+            ItensVenda itensVenda = new(vendaId, produtoId, quantidade, preco);
+            return (itensVenda, id);
+        }
 
     }
 }

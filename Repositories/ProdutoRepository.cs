@@ -74,12 +74,80 @@ namespace Hortifruti.Repositories
 
         public List<Produto> Listar()
         {
-            throw new NotImplementedException();
+            List<Produto> produto = new List<Produto>();
+            try
+            {
+                var connection = new HortifrutiContext(_connectionString);
+                using (connection.DbConnection())
+                {
+                    using (var comando = connection.DbConnection().CreateCommand())
+                    {
+                        comando.CommandText = "SELECT * FROM produtos";
+                        using (var leitor = comando.ExecuteReader())
+                        {
+                            while (leitor.Read())
+                            {
+
+                                //ellen quebrou minhas pernas com essa modificação sem avisar kk
+                                int Fornecedor = leitor["FornecedorId"] != DBNull.Value ? Convert.ToInt32(leitor["FornecedorId"]) : 0;
+                                string Nome = leitor["Nome"] != DBNull.Value ? leitor["Nome"].ToString() : string.Empty;
+
+                                decimal Preco = leitor["Preco"] != DBNull.Value ? Convert.ToDecimal(leitor["Preco"]) : 0;
+
+                                Produto produtos = new Produto(Fornecedor, Nome, Preco);
+                                produto.Add(produtos);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SQLiteException sqLiteEx)
+            {
+                Console.WriteLine("Error SQLite:" + sqLiteEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error geral:" + ex.Message);
+            }
+            return produto;
         }
+
 
         public bool Remover(int id)
         {
-            throw new NotImplementedException();
+           try
+            {
+                var connection = new HortifrutiContext(_connectionString);
+                using (connection.DbConnection())
+                {
+                    using (var comando = connection.DbConnection().CreateCommand())
+                    {
+                        comando.CommandText = "DELETE FROM produtos WHERE Id = @id ";
+                        comando.Parameters.AddWithValue("@id",id);
+
+                        int linhasAfetadas = comando.ExecuteNonQuery();
+
+
+                        if(linhasAfetadas>0){
+                            Console.WriteLine("Produto removido com sucesso!");
+                            return true;
+                        }else{
+                            Console.WriteLine("Produto nao encontrado!");
+                            return false;
+                        }
+                    }
+                }
+            }
+           catch (SQLiteException sqLiteEx)
+            {
+                Console.WriteLine("Error SQLite:" + sqLiteEx.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error geral:" + ex.Message);
+                return false;
+            }
         }
     }
 }
