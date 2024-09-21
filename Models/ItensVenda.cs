@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace Hortifruti.Models
 {
-    public class ItensVenda(int vendaId, int produtoId, int quantidade, decimal preco)
+    public class ItensVenda(int produtoId, int quantidade, decimal preco)
     {
         public int Id { get;}
-        public int VendaId { get; } = vendaId;
         public int ProdutoId { get; } = produtoId;
         public int Quantidade { get; } = quantidade;
         public decimal Preco { get; } = preco;

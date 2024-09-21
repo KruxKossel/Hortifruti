@@ -13,50 +13,77 @@ namespace Hortifruti.Repositories
     {
         private readonly string _connectionString = connectionString;
 
-        public bool Adicionar(ItensVenda entidade)
+        public (bool, decimal) Adicionar(ItensVenda entidade)
         {
             try
             {
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {
+                    // checa id
+                    using (var checkCommand = connection.DbConnection().CreateCommand())
+                    {
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM produtos WHERE id = @id";
+                        checkCommand.Parameters.AddWithValue("@id", entidade.ProdutoId);
 
-                    double total = Convert.ToDouble(entidade.Quantidade) * Convert.ToDouble(entidade.Preco);
-                    // add
-                    using (var comando = connection.DbConnection().CreateCommand()){
-
-                        comando.CommandText = "INSERT INTO itens_venda (VendaId, ProdutoId, Quantidade, Preco) VALUES (@vendaId, @produtoId, @quantidade, @preco)";
-                        comando.Parameters.AddWithValue("@vendaId", entidade.VendaId);
-                        comando.Parameters.AddWithValue("@produtoId", entidade.ProdutoId);
-                        comando.Parameters.AddWithValue("@quantidade", entidade.Quantidade);
-                        comando.Parameters.AddWithValue("@preco", entidade.Preco);
-
-                        comando.ExecuteNonQuery();
-
+                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            Console.WriteLine($"\nID {entidade.ProdutoId} encontrado no banco de dados.\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\n\nID {entidade.ProdutoId} não existe. \n");
+                            return (false, 0);
+                        }
                     }
-                    using (var comando = connection.DbConnection().CreateCommand()){
 
-                        comando.CommandText = "UPDATE vendas SET Total = @total WHERE Id = @vendaId";
-                        comando.Parameters.AddWithValue("@vendaId", entidade.VendaId);
-                        comando.Parameters.AddWithValue("@total", total);
-                        comando.ExecuteNonQuery();
+                    decimal precoProduto = 0;
+
+                    using (var comando = connection.DbConnection().CreateCommand())
+                    {
+                        comando.CommandText = "SELECT Preco FROM produtos WHERE Id = @produtoId";
+                        comando.Parameters.AddWithValue("@produtoId", entidade.ProdutoId);
+
+                        using (var leitor = comando.ExecuteReader())
+                        {
+                            if (leitor.Read())
+                            {
+                                precoProduto = leitor["Preco"] != DBNull.Value ? Convert.ToDecimal(leitor["Preco"]) : 0;
+                            }
+                        }
+                    }
+
+                    var vendaPreco = new ItensVenda(entidade.ProdutoId, entidade.Quantidade, precoProduto);
+
+                    decimal total = entidade.Quantidade * vendaPreco.Preco;
+
+                    // add
+                    using (var comandoInsert = connection.DbConnection().CreateCommand())
+                    {
+                        comandoInsert.CommandText = "INSERT INTO itens_venda (ProdutoId, Quantidade, Preco) VALUES (@produtoId, @quantidade, @preco)";
+                        comandoInsert.Parameters.AddWithValue("@produtoId", entidade.ProdutoId);
+                        comandoInsert.Parameters.AddWithValue("@quantidade", entidade.Quantidade);
+                        comandoInsert.Parameters.AddWithValue("@preco", vendaPreco.Preco);
+
+                        comandoInsert.ExecuteNonQuery();
                     }
 
                     Console.Clear();
                     Console.WriteLine("\nDados inseridos com sucesso!\n\n");
-                    return true; 
+                    return (true, total); 
                 }
 
             }
             catch (SQLiteException sqLiteEx)
             {
                 Console.WriteLine("Error SQLite:" + sqLiteEx.Message);
-                return false;
+                return (false,0);
 
             }
             catch(Exception ex){
                 Console.WriteLine("Error geral:" + ex.Message);
-                return false;
+                return (false,0);
             }
         }
 
@@ -76,9 +103,8 @@ namespace Hortifruti.Repositories
                     // checa id
                     using (var checkCommand = connection.DbConnection().CreateCommand())
                     {
-                        checkCommand.CommandText = "SELECT COUNT(1) FROM itens_venda WHERE Id = @id AND VendaId = @vendaid AND ProdutoId = @produtoid";
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM itens_venda WHERE Id = @id AND ProdutoId = @produtoid";
                         checkCommand.Parameters.AddWithValue("@id", id);
-                        checkCommand.Parameters.AddWithValue("@vendaid", entidade.VendaId);
                         checkCommand.Parameters.AddWithValue("@produtoid", entidade.ProdutoId);
 
                         var count = Convert.ToInt32(checkCommand.ExecuteScalar());
@@ -96,9 +122,8 @@ namespace Hortifruti.Repositories
 
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
-                        comando.CommandText = "UPDATE itens_venda SET VendaId = @vendaid, ProdutoId = @produtoid, Quantidade = @quantidade, Preco = @preco WHERE Id = @id";
+                        comando.CommandText = "UPDATE itens_venda SET ProdutoId = @produtoid, Quantidade = @quantidade, Preco = @preco WHERE Id = @id";
                         comando.Parameters.AddWithValue("@id", id);
-                        comando.Parameters.AddWithValue("@vendaid", entidade.VendaId);
                         comando.Parameters.AddWithValue("@produtoid", entidade.ProdutoId);
                         comando.Parameters.AddWithValue("@quantidade", entidade.Quantidade);
                         comando.Parameters.AddWithValue("@preco", entidade.Preco);
@@ -114,13 +139,12 @@ namespace Hortifruti.Repositories
                             Console.WriteLine("Nenhum dado encontrado");
                         }
                     }
-                        using (var comando = connection.DbConnection().CreateCommand()){
+                    //     using (var comando = connection.DbConnection().CreateCommand()){
 
-                        comando.CommandText = "UPDATE vendas SET Total = @total WHERE Id = @vendaId";
-                        comando.Parameters.AddWithValue("@vendaId", entidade.VendaId);
-                        comando.Parameters.AddWithValue("@total", total);
-                        comando.ExecuteNonQuery();
-                    }
+                    //     comando.CommandText = "UPDATE vendas SET Total = @total WHERE Id = @vendaId";
+                    //     comando.Parameters.AddWithValue("@total", total);
+                    //     comando.ExecuteNonQuery();
+                    // }
                 }
             }
             catch (SQLiteException sqLiteEx)
@@ -150,12 +174,11 @@ namespace Hortifruti.Repositories
                             while (leitor.Read())
                             {
                             int id = leitor["Id"] != DBNull.Value ? Convert.ToInt32(leitor["Id"]) : 0;
-                            int VendaId = leitor["VendaId"] != DBNull.Value ? Convert.ToInt32(leitor["VendaId"]) : 0;
                             int ProdutoId = leitor["ProdutoId"] != DBNull.Value ? Convert.ToInt32(leitor["ProdutoId"]) : 0;
                             int Quantidade = leitor["Quantidade"] != DBNull.Value ? Convert.ToInt32(leitor["Quantidade"]) : 0;
                             decimal Preco = leitor["Preco"] != DBNull.Value ? Convert.ToDecimal(leitor["Preco"]) : 0.0m;
 
-                                ItensVenda itenVenda = new(VendaId, ProdutoId, Quantidade, Preco);
+                                ItensVenda itenVenda = new( ProdutoId, Quantidade, Preco);
                                 itensVenda.Add(itenVenda);
                             }
                         }

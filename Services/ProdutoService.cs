@@ -11,11 +11,11 @@ namespace Hortifruti.Services
     {
         private readonly ProdutoRepository _produtoRepository = produtoRepository;
 
-        public bool Adicionar(Produto entidade)
+        public (bool, decimal) Adicionar(Produto entidade)
         {
-            bool fornecedorId = _produtoRepository.Adicionar(entidade);
+            (bool,decimal) fornecedorId = _produtoRepository.Adicionar(entidade);
 
-            if (fornecedorId == false){
+            if (fornecedorId == (false,null)){
                 return fornecedorId;
             }
             return fornecedorId;

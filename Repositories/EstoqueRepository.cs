@@ -11,7 +11,7 @@ namespace Hortifruti.Repositories
     {
         private readonly string _connectionString = connectionString;
 
-        public bool Adicionar(Estoque entidade)
+        public (bool, decimal) Adicionar(Estoque entidade)
         {
             throw new NotImplementedException();
         }

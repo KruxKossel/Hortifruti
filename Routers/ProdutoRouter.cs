@@ -12,13 +12,14 @@ namespace Hortifruti.Routers
     {
         private readonly ProdutoService _produtoService = produtoService;
 
-        public bool Adicionar(Produto entidade)
+        public (bool, decimal) Adicionar(Produto entidade)
         {        
-            bool fornecedorId = _produtoService.Adicionar(entidade);
+            (bool, decimal) fornecedorId = _produtoService.Adicionar(entidade);
 
-            if (fornecedorId == false){
+            if (fornecedorId == (false, 0)){
                 return fornecedorId;
             }
+            
             return fornecedorId;
             
 

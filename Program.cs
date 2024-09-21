@@ -57,10 +57,9 @@ do
     Console.WriteLine("1. Gerenciar Produtos");
     Console.WriteLine("2. Gerenciar Estoque");
     Console.WriteLine("3. Gerenciar Vendas");
-    Console.WriteLine("4. Gerenciar Itens de Venda");
-    Console.WriteLine("5. Gerenciar Fornecedores");
-    Console.WriteLine("6. Gerenciar Clientes");
-    Console.WriteLine("7. Gerenciar Funcionários");
+    Console.WriteLine("4. Gerenciar Fornecedores");
+    Console.WriteLine("5. Gerenciar Clientes");
+    Console.WriteLine("6. Gerenciar Funcionários");
     Console.WriteLine("0. Sair");
     Console.WriteLine("=============================");
     Console.Write("Escolha uma opção: ");
@@ -77,18 +76,15 @@ do
                     Menus.GerenciarEstoque(estoqueRouter);
                 break;
             case 3:
-                    Menus.GerenciarVendas(vendaRouter);
+                    Menus.GerenciarVendas(vendaRouter, itensVendaRouter);
                 break;
             case 4:
-                    Menus.GerenciarItensdeVenda(itensVendaRouter);
-                break;
-            case 5:
                     Menus.GerenciarFornecedores(fornecedorRouter);
                 break;
-            case 6:
+            case 5:
                     Menus.GerenciarClientes(clienteRouter);
                 break;
-            case 7:
+            case 6:
                     Menus.GerenciarFuncionarios(funcionarioRouter);
                 break;
             case 0:

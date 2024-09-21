@@ -139,7 +139,7 @@ namespace Hortifruti.Menus
             } while (option != 0);
         }
 
-        public static void GerenciarItensdeVenda(ItensVendaRouter itensVendaRouter) // exemplo de segundo menu
+        public static decimal GerenciarItensdeVenda(ItensVendaRouter itensVendaRouter) // exemplo de segundo menu
         {
             int option;
             do
@@ -148,10 +148,11 @@ namespace Hortifruti.Menus
                 Console.WriteLine("=============================");
                 Console.WriteLine("  Gerenciar Itens de Venda");
                 Console.WriteLine("=============================");
-                Console.WriteLine("1. Adicionar Itens de Venda");
-                Console.WriteLine("2. Listar Itens de Venda");
-                Console.WriteLine("3. Atualizar Itens de Venda");
-                Console.WriteLine("4. Remover Itens de Venda");
+                Console.WriteLine("1. Adicionar Itens a Venda");
+                Console.WriteLine("2. Listar Itens da Venda");
+                Console.WriteLine("3. Atualizar Itens da Venda");
+                Console.WriteLine("4. Remover Itens da Venda");
+                Console.WriteLine("5. Prosseguir para a Venda");
                 Console.WriteLine("0. Voltar");
                 Console.WriteLine("=============================");
                 Console.Write("Escolha uma opção: ");
@@ -162,14 +163,16 @@ namespace Hortifruti.Menus
                     switch (option)
                     {
                         case 1:
-                            ItensVenda itensVenda = CriarEntidade.CriarItensVenda();
-                            itensVendaRouter.Adicionar(itensVenda);
+                            var itensVenda = CriarEntidade.CriarItensVenda();
+                            var (sucesso, total) = itensVendaRouter.Adicionar(itensVenda);
+
+                            return total;
                             break;
                         case 2:
                             List<ItensVenda> itensVendas = itensVendaRouter.Listar();
                             Console.WriteLine("Itens da venda:");
                             foreach(var iv in itensVendas){
-                            Console.WriteLine($"\nId do Produto: {iv.ProdutoId}\nId da venda: {iv.VendaId}\nQuantidade: {iv.Quantidade}\nPreco: {iv.Preco}");
+                            Console.WriteLine($"\nId do Produto: {iv.ProdutoId}\nQuantidade: {iv.Quantidade}\nPreco: {iv.Preco}");
                             }                        
                             break;
                         case 3:
@@ -191,6 +194,9 @@ namespace Hortifruti.Menus
                             }
                             itensVendaRouter.Remover(id);
                             break;
+                        case 5:
+                            return 5;
+                            break;
                         case 0:
                             Console.WriteLine("\nVoltando ao menu principal...");
                             break;
@@ -207,9 +213,11 @@ namespace Hortifruti.Menus
                 Console.WriteLine("\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
             } while (option != 0);
+
+            return 0;
         }
 
-        public static void GerenciarVendas(VendaRouter vendaRouter) // exemplo de segundo menu
+        public static void GerenciarVendas(VendaRouter vendaRouter, ItensVendaRouter itensVendaRouter) // exemplo de segundo menu
         {
             int option;
             do
@@ -218,10 +226,10 @@ namespace Hortifruti.Menus
                 Console.WriteLine("=============================");
                 Console.WriteLine("  Gerenciar Vendas");
                 Console.WriteLine("=============================");
-                Console.WriteLine("1. Adicionar Vendas");
+                Console.WriteLine("1. Adicionar uma Venda");
                 Console.WriteLine("2. Listar Vendas");
-                Console.WriteLine("3. Atualizar Vendas");
-                Console.WriteLine("4. Remover Vendas");
+                Console.WriteLine("3. Atualizar uma Venda");
+                Console.WriteLine("4. Remover uma Venda");
                 Console.WriteLine("0. Voltar");
                 Console.WriteLine("=============================");
                 Console.Write("Escolha uma opção: ");
@@ -232,14 +240,18 @@ namespace Hortifruti.Menus
                     switch (option)
                     {
                         case 1:
-                            Venda venda = CriarEntidade.CriarVenda();
-                            vendaRouter.Adicionar(venda);
+                            var total = GerenciarItensdeVenda(itensVendaRouter);
+
+                            if (total != 0 || total == 5){
+                                Venda venda = CriarEntidade.CriarVenda(total);
+                                vendaRouter.Adicionar(venda);
+                            }
                             break;
                         case 2:
                             List<Venda> vendas = vendaRouter.Listar();
                             Console.WriteLine("Vendas:");
-                            foreach(var Venda in vendas){
-                                Console.WriteLine($"\nCLiente Id: {Venda.ClienteId}\n Data: {Venda.Data}\n Total: {Venda.Total}");
+                            foreach(var vendasFeitas in vendas){
+                                Console.WriteLine($"\nCliente Id: {vendasFeitas.ClienteId}\n Data: {vendasFeitas.Data}\n Total: {vendasFeitas.Total}");
                             }
                             break;
                         case 3:

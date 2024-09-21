@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Hortifruti.Models
 {
-    public class Venda(int clienteId, DateTime data, decimal total)
+    public class Venda(int clienteId, int itensVendaId, DateTime data, decimal total)
     {
         public int Id { get; }
         public int ClienteId { get; } = clienteId;
+        public int ItensVendaId { get; } = itensVendaId;
         public DateTime Data { get; } = data;
         public decimal Total { get;} = total;
     }

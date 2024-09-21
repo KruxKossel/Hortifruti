@@ -11,10 +11,10 @@ namespace Hortifruti.Services
     {
         private readonly ClienteRepository _clienteRepository = clienteRepository;
 
-        public bool Adicionar(Cliente entidade)
+        public (bool, decimal) Adicionar(Cliente entidade)
         {
-            bool pessoaAdicionada = _clienteRepository.Adicionar(entidade);
-            return pessoaAdicionada;
+           
+            return _clienteRepository.Adicionar(entidade);;
         }
 
         public List<Cliente> Atualizar()

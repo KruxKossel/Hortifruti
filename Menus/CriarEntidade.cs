@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -236,23 +237,9 @@ namespace Hortifruti.Menus
 
         public static ItensVenda CriarItensVenda()
         {
-            int vendaId;
             int produtoId;
             int quantidade;
             decimal preco;
-
-            while (true)
-            {
-                Console.Write("\nDigite o ID da Venda: ");
-                if (int.TryParse(Console.ReadLine(), out vendaId))
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                }
-            }
 
             while (true)
             {
@@ -280,20 +267,9 @@ namespace Hortifruti.Menus
                 }
             }
 
-            while (true)
-            {
-                Console.Write("\nDigite o PREÇO dos Itens da Venda: ");
-                if (decimal.TryParse(Console.ReadLine(), out preco))
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("\n\nValor inválido. Por favor, digite um número decimal.\n");
-                }
-            }
+            preco = 0;
 
-            ItensVenda itensVenda = new(vendaId, produtoId, quantidade, preco);
+            ItensVenda itensVenda = new(produtoId, quantidade, preco);
 
             return itensVenda;
         }
@@ -349,14 +325,16 @@ namespace Hortifruti.Menus
             return produto;
         }
         
-        public static Venda CriarVenda(){
-            int ClienteId;
-            DateTime  Data;
-            decimal Total;
+        public static Venda CriarVenda(decimal total){
+
+            int clienteId;
+            int itensVendaId;
+            DateTime data;
+
             while (true)
             {
                 Console.Write("\nDigite o ID do Cliente: ");
-                if (int.TryParse(Console.ReadLine(), out ClienteId))
+                if (int.TryParse(Console.ReadLine(), out clienteId))
                 {
                     break;
                 }
@@ -366,9 +344,22 @@ namespace Hortifruti.Menus
                 }
 
             }
-            Total=0;
-            Data = DateTime.Now;
-            Venda venda = new Venda(ClienteId,Data,Total);
+            while (true)
+            {
+                Console.Write("\nDigite o ID dos Itens da venda: ");
+                if (int.TryParse(Console.ReadLine(), out itensVendaId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+
+            }
+            
+            data = DateTime.Now;
+            Venda venda = new Venda(clienteId, itensVendaId , data , total);
             return venda;
         }
     }

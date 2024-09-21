@@ -14,7 +14,7 @@ namespace Hortifruti.Repositories
     {
         private readonly string _connectionString = connectionString;
 
-        public bool Adicionar(Funcionario entidade)
+        public (bool, decimal) Adicionar(Funcionario entidade)
         {
             try
             {
@@ -22,12 +22,12 @@ namespace Hortifruti.Repositories
                 if (string.IsNullOrWhiteSpace(entidade.Nome))
                 {
                     Console.WriteLine("Erro: Nome do funcionário não pode ser vazio.");
-                    return false;
+                    return (false,0);
                 }
                  if (string.IsNullOrWhiteSpace(entidade.Cpf))
                 {
                     Console.WriteLine("Erro: CPF do funcionário não pode ser vazio.");
-                    return false;
+                    return (false,0);
                 }
                 
                 
@@ -48,20 +48,20 @@ namespace Hortifruti.Repositories
 
                     Console.Clear();
                     Console.WriteLine("\nDados inseridos com sucesso!\n\n");
-                    return true; // cliente adicionado com sucesso
+                    return (true,0); // cliente adicionado com sucesso
                 }
 
             }
             catch (SQLiteException sqLiteEx)
             {
                 Console.WriteLine("Error SQLite:" + sqLiteEx.Message);
-                return false;
+                return (false,0);
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error geral:" + ex.Message);
-                return false;
+                return (false,0);
             }
             throw new NotImplementedException();
         }

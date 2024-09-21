@@ -12,7 +12,7 @@ namespace Hortifruti.Routers
     {
         private readonly FornecedorService _fornecedorService = fornecedorService;
 
-        public bool Adicionar(Fornecedor entidade)
+        public (bool, decimal) Adicionar(Fornecedor entidade)
         {
             return _fornecedorService.Adicionar(entidade);
         }
