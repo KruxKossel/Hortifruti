@@ -12,8 +12,14 @@ namespace Hortifruti.Repositories
     {
         private readonly string _connectionString = connectionString;
 
-        public bool Adicionar(Produto entidade)
+        public (bool, decimal) Adicionar(Produto entidade)
         {
+            if (string.IsNullOrWhiteSpace(entidade.Nome))
+            {
+                Console.WriteLine("Erro: Nome do Produto não pode ser vazio.");
+                return (false,0);
+            }
+
             try
             {
                 var connection = new HortifrutiContext(_connectionString);
@@ -34,7 +40,7 @@ namespace Hortifruti.Repositories
                         else
                         {
                             Console.WriteLine($"\n\nID {entidade.FornecedorId} não existe. \n");
-                            return false;
+                            return (false,0);
                         }
                     }
 
@@ -50,7 +56,10 @@ namespace Hortifruti.Repositories
 
                     Console.Clear();
                     Console.WriteLine("\nDados inseridos com sucesso!\n\n");
-                    return true; // cliente adicionado com sucesso
+                    if(entidade.Preco == 0){
+                        return (true, 0.1m);
+                    }
+                    return (true,entidade.Preco); // cliente adicionado com sucesso
 
                 }
 
@@ -58,12 +67,12 @@ namespace Hortifruti.Repositories
             catch (SQLiteException sqLiteEx)
             {
                 Console.WriteLine("Error SQLite:" + sqLiteEx.Message);
-                return false;
+                return (false,0);
 
             }
             catch(Exception ex){
                 Console.WriteLine("Error geral:" + ex.Message);
-                return false;
+                return (false,0);
             }
         }
 
@@ -91,7 +100,6 @@ namespace Hortifruti.Repositories
                                 //ellen quebrou minhas pernas com essa modificação sem avisar kk
                                 int Fornecedor = leitor["FornecedorId"] != DBNull.Value ? Convert.ToInt32(leitor["FornecedorId"]) : 0;
                                 string Nome = leitor["Nome"] != DBNull.Value ? leitor["Nome"].ToString() : string.Empty;
-
                                 decimal Preco = leitor["Preco"] != DBNull.Value ? Convert.ToDecimal(leitor["Preco"]) : 0;
 
                                 Produto produtos = new Produto(Fornecedor, Nome, Preco);

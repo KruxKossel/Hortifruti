@@ -11,7 +11,7 @@ namespace Hortifruti.Services
     {
         private readonly VendaRepository _vendaRepository = vendaRepository;
 
-        public bool Adicionar(Venda entidade)
+        public (bool, decimal) Adicionar(Venda entidade)
         {
             return _vendaRepository.Adicionar(entidade);
         }

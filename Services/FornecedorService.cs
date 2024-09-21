@@ -11,10 +11,9 @@ namespace Hortifruti.Services
     {
         private readonly FornecedorRepository _fornecedorRepository = fornecedorRepository;
 
-        public bool Adicionar(Fornecedor entidade)
+        public (bool, decimal) Adicionar(Fornecedor entidade)
         {
-            bool pessoaAdicionada = _fornecedorRepository.Adicionar(entidade);
-            return pessoaAdicionada;
+            return  _fornecedorRepository.Adicionar(entidade);
         }
 
         public List<Fornecedor> Atualizar()

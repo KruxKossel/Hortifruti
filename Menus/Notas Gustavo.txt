@@ -1,0 +1,14 @@
+se possivel alterar os Digite ID tal, para o nome.
+
+ex.: 
+     Console.Write("\nDigite o ID do Produto: ");
+     if (int.TryParse(Console.ReadLine(), out produtoId))
+
+mudar para NOME do produto
+    // vou alterar o script para que ele só permita nomes unicos
+
+mas para isso ocorres é necessário que haja uma checagem no repositorio, para ver se o nome existe.
+caso o nome exista ele retorna o id para popular a tabela que está exigindo a fk.
+
+
+Duvidas entrar em contato com a Ellen, beijos.

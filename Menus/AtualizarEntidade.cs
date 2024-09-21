@@ -214,14 +214,28 @@ namespace Hortifruti.Menus
         public static (Venda, int) AtualizarVenda(){
 
             int id = CriarId();
-            int ClienteId;
-            DateTime  Data = DateTime.Now;
-            decimal Total=0;
+            int clienteId;
+            int itensVendaId;
+            DateTime  data = DateTime.Now;
+            decimal total=0;
 
            while (true)
             {
                 Console.Write("\nDigite o novo Id do cliente: ");
-                if (int.TryParse(Console.ReadLine(), out ClienteId))
+                if (int.TryParse(Console.ReadLine(), out clienteId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+
+            }
+            while (true)
+            {
+                Console.Write("\nDigite o novo Id do cliente: ");
+                if (int.TryParse(Console.ReadLine(), out itensVendaId))
                 {
                     break;
                 }
@@ -232,30 +246,16 @@ namespace Hortifruti.Menus
 
             }
 
-            Venda venda= new(ClienteId, Data,Total);
+            Venda venda= new(clienteId, itensVendaId, data, total);
 
             return (venda, id);
         }
         public static (ItensVenda, int) AtualizarItensVenda(){
 
             int id = CriarId();
-            int vendaId;
             int produtoId;
             int quantidade;
             decimal preco;
-
-            while (true)
-            {
-                Console.Write("\nDigite o ID da Venda: ");
-                if (int.TryParse(Console.ReadLine(), out vendaId))
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                }
-            }
 
             while (true)
             {
@@ -296,7 +296,7 @@ namespace Hortifruti.Menus
                 }
             }
 
-            ItensVenda itensVenda = new(vendaId, produtoId, quantidade, preco);
+            ItensVenda itensVenda = new(produtoId, quantidade, preco);
             return (itensVenda, id);
         }
 

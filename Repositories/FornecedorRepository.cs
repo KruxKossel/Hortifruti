@@ -12,18 +12,18 @@ namespace Hortifruti.Repositories
     public class FornecedorRepository(string connectionString) : ICrud<Fornecedor>
     {
         private readonly string _connectionString = connectionString;
-        public bool Adicionar(Fornecedor entidade)
+        public (bool, decimal) Adicionar(Fornecedor entidade)
         {
             if (string.IsNullOrWhiteSpace(entidade.RazaoSocial))
             {
                 Console.WriteLine("Erro: Razao Social do fornecedor não pode ser vazia.");
-                return false;
+                return (false,0);
             }
 
             if (string.IsNullOrWhiteSpace(entidade.Cnpj))
             {
                 Console.WriteLine("Erro: CNPJ do fornecedor não pode ser vazio.");
-                return false;
+                return (false,0);
             }
 
             try
@@ -44,7 +44,7 @@ namespace Hortifruti.Repositories
 
                     Console.Clear();
                     Console.WriteLine("\nDados inseridos com sucesso!\n\n");
-                    return true; // fornecedor adicionado com sucesso
+                    return (true,0); // fornecedor adicionado com sucesso
 
                 }
 
@@ -52,12 +52,12 @@ namespace Hortifruti.Repositories
             catch (SQLiteException sqLiteEx)
             {
                 Console.WriteLine("Error SQLite:" + sqLiteEx.Message);
-                return false;
+                return (false,0);
 
             }
             catch(Exception ex){
                 Console.WriteLine("Error geral:" + ex.Message);
-                return false;
+                return (false,0);
             }
         }
 
