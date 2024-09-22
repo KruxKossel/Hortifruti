@@ -79,8 +79,6 @@ namespace Hortifruti.Menus
             return cliente;
         }
 
-        
-
         public static Estoque CriarEstoque()
         {
             int produtoId;
@@ -325,10 +323,9 @@ namespace Hortifruti.Menus
             return produto;
         }
         
-        public static Venda CriarVenda(decimal total){
+        public static Venda CriarVenda(decimal total, int itensVendaId){
 
             int clienteId;
-            int itensVendaId;
             DateTime data;
 
             while (true)
@@ -344,22 +341,9 @@ namespace Hortifruti.Menus
                 }
 
             }
-            while (true)
-            {
-                Console.Write("\nDigite o ID dos Itens da venda: ");
-                if (int.TryParse(Console.ReadLine(), out itensVendaId))
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                }
 
-            }
-            
             data = DateTime.Now;
-            Venda venda = new Venda(clienteId, itensVendaId , data , total);
+            Venda venda = new Venda(clienteId, itensVendaId, data, total);
             return venda;
         }
     }

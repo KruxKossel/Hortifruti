@@ -9,11 +9,11 @@ using Hortifruti.Models;
 
 namespace Hortifruti.Repositories
 {
-    public class ItensVendaRepository(string connectionString) : ICrud<ItensVenda>
+    public class ItensVendaRepository(string connectionString) : IItensVenda<ItensVenda>
     {
         private readonly string _connectionString = connectionString;
 
-        public (bool, decimal) Adicionar(ItensVenda entidade)
+        public (bool, decimal, int) Adicionar(ItensVenda entidade)
         {
             try
             {
@@ -34,11 +34,12 @@ namespace Hortifruti.Repositories
                         else
                         {
                             Console.WriteLine($"\n\nID {entidade.ProdutoId} não existe. \n");
-                            return (false, 0);
+                            return (false, 0, 0);
                         }
                     }
 
                     decimal precoProduto = 0;
+                    int itensVendaId = 0;
 
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
@@ -53,6 +54,9 @@ namespace Hortifruti.Repositories
                             }
                         }
                     }
+
+                    
+                    
 
                     var vendaPreco = new ItensVenda(entidade.ProdutoId, entidade.Quantidade, precoProduto);
 
@@ -71,19 +75,33 @@ namespace Hortifruti.Repositories
 
                     Console.Clear();
                     Console.WriteLine("\nDados inseridos com sucesso!\n\n");
-                    return (true, total); 
+
+                    using (var comando = connection.DbConnection().CreateCommand())
+                    {
+                        comando.CommandText = "SELECT Id FROM itens_venda ORDER BY Id DESC LIMIT 1;";
+
+                        using (var leitor = comando.ExecuteReader())
+                        {
+                            if (leitor.Read())
+                            {
+                                itensVendaId = leitor["Id"] != DBNull.Value ? Convert.ToInt32(leitor["Id"]) : 0;
+                            }
+                        }
+                    }
+                    
+                    return (true, total, itensVendaId); 
                 }
 
             }
             catch (SQLiteException sqLiteEx)
             {
                 Console.WriteLine("Error SQLite:" + sqLiteEx.Message);
-                return (false,0);
+                return (false,0,0);
 
             }
             catch(Exception ex){
                 Console.WriteLine("Error geral:" + ex.Message);
-                return (false,0);
+                return (false,0,0);
             }
         }
 

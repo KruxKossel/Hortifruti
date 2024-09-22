@@ -9,6 +9,7 @@ string connectionString = "Data Source=" + DatabaseLocal.DatabasePath;
 
 HortifrutiContext dbManager = new(connectionString);
 
+
 dbManager.InicializeDatabase();
 
 // ================================== Produtos ==================================
@@ -24,12 +25,11 @@ EstoqueRouter estoqueRouter = new(estoqueService);
 // =================================== Vendas ==================================
 VendaRepository vendaRepository = new(connectionString);
 VendaService vendaService = new(vendaRepository);
-VendaRouter vendaRouter = new(vendaService);
-
-// =============================== Itens de Venda ==================================
 ItensVendaRepository itensVendaRepository = new(connectionString);
 ItensVendaService itensVendaService = new(itensVendaRepository);
-ItensVendaRouter itensVendaRouter = new(itensVendaService);
+VendaRouter vendaRouter = new(vendaService,itensVendaService);
+
+// =============================== Itens de Venda ==================================
 
 // ================================== Fornecedores ==================================
 FornecedorRepository fornecedorRepository = new(connectionString);
@@ -70,22 +70,22 @@ do
         switch (option)
         {
             case 1:
-                    Menus.GerenciarProdutos(produtoRouter);
+                Menus.GerenciarMenu(produtoRouter, option);
                 break;
             case 2:
-                    Menus.GerenciarEstoque(estoqueRouter);
+                Menus.GerenciarMenu(estoqueRouter,option);
                 break;
             case 3:
-                    Menus.GerenciarVendas(vendaRouter, itensVendaRouter);
+                Menus.GerenciarMenu(vendaRouter,option);    
                 break;
             case 4:
-                    Menus.GerenciarFornecedores(fornecedorRouter);
+                Menus.GerenciarMenu(fornecedorRouter,option);    
                 break;
             case 5:
-                    Menus.GerenciarClientes(clienteRouter);
+                Menus.GerenciarMenu(clienteRouter,option);    
                 break;
             case 6:
-                    Menus.GerenciarFuncionarios(funcionarioRouter);
+                Menus.GerenciarMenu(funcionarioRouter,option);
                 break;
             case 0:
                     Console.WriteLine("Saindo...");

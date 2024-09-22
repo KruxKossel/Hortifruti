@@ -8,26 +8,30 @@ using Hortifruti.Services;
 
 namespace Hortifruti.Routers
 {
-    public class VendaRouter(VendaService vendaService) : ICrud<Venda>
+    public class VendaRouter(VendaService vendaService, ItensVendaService itensVenda) : Ivendas<Venda,ItensVenda>
     {
         private readonly VendaService _VendaService = vendaService;
+        private readonly ItensVendaService _ItensVendaService = itensVenda;
 
-        public (bool, decimal) Adicionar(Venda entidade)
+        public (bool, decimal) AdicionarVenda(Venda entidade) // assinatura 2
         {
             return _VendaService.Adicionar(entidade);
         }
+        public (bool, decimal, int) AdicionaritensVenda(ItensVenda entidade){
+            return _ItensVendaService.Adicionar(entidade);
+        }
 
-        public List<Venda> Atualizar()
+        public List<Venda> AtualizarVenda()
         {
             return _VendaService.Atualizar();
         }
 
-        public List<Venda> Listar()
+        public List<Venda> ListarVenda()
         {
             return _VendaService.Listar();
         }
 
-        public bool Remover(int id)
+        public bool RemoverVenda(int id)
         {
             return _VendaService.Remover(id);
         }

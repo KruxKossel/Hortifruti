@@ -7,11 +7,11 @@ using Hortifruti.Repositories;
 
 namespace Hortifruti.Services
 {
-    public class ItensVendaService(ItensVendaRepository itensVendaRepository) : ICrud<ItensVenda>
+    public class ItensVendaService(ItensVendaRepository itensVendaRepository) : IItensVenda<ItensVenda>
     {
         private readonly ItensVendaRepository _itensVendaRepository = itensVendaRepository;
 
-        public (bool, decimal) Adicionar(ItensVenda entidade)
+        public (bool, decimal, int) Adicionar(ItensVenda entidade)
         {
            return _itensVendaRepository.Adicionar(entidade);
         }
