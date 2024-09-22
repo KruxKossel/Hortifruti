@@ -114,11 +114,9 @@ namespace Hortifruti.Repositories
 
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
-                        comando.CommandText = "UPDATE vendas SET ClienteId = @clienteid, Data = @data, Total = @total WHERE Id = @id";
+                        comando.CommandText = "UPDATE vendas SET ClienteId = @clienteid, WHERE Id = @id";
                         comando.Parameters.AddWithValue("@id", id);
                         comando.Parameters.AddWithValue("@clienteid", entidade.ClienteId);
-                        comando.Parameters.AddWithValue("@data", entidade.Data);
-                        comando.Parameters.AddWithValue("@total", entidade.Total);
 
                         int linhasAfetadas = comando.ExecuteNonQuery();
                         if (linhasAfetadas > 0)

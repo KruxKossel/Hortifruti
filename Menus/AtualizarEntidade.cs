@@ -299,6 +299,41 @@ namespace Hortifruti.Menus
             ItensVenda itensVenda = new(produtoId, quantidade, preco);
             return (itensVenda, id);
         }
+        public static (Estoque, int) AtualizarEstoque(){
+
+            int id = CriarId();
+            int produtoId;
+            int quantidade;
+
+            while (true)
+            {
+                Console.Write("\nDigite o ID do Produto: ");
+                if (int.TryParse(Console.ReadLine(), out produtoId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+            }
+
+            while (true)
+            {
+                Console.Write("\nDigite a QUANTIDADE de Itens da Venda: ");
+                if (int.TryParse(Console.ReadLine(), out quantidade))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nQuantidade inválida. Por favor, digite um número inteiro.\n");
+                }
+            }
+
+            Estoque estoque = new(produtoId, quantidade);
+            return (estoque, id);
+        }
 
     }
 }

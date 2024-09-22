@@ -144,16 +144,37 @@ namespace Hortifruti.Menus
     switch (option)
                     {
                         case 1:
-                            //
+                            Estoque estoque = CriarEntidade.CriarEstoque();
+                            estoqueRouter.Adicionar(estoque);
                             break;
                         case 2:
-                            //
+                            List<Estoque> estoques = estoqueRouter.Listar();
+                            
+                            Console.WriteLine("\nEstoque cadastrado:");
+
+                            foreach(var e in estoques){
+                                Console.WriteLine($"\nProduto Id {e.ProdutoId}\nQuantidade {e.Quantidade}\n");
+                            }
                             break;
                         case 3:
-                            //
+                            estoqueRouter.Atualizar();
                             break;
                         case 4:
-                            // 
+                             int id;
+                            
+                             while (true)
+                            {
+                                Console.WriteLine("Digite o ID do Estoque a ser removido: ");
+                                if (int.TryParse(Console.ReadLine(), out id))
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                                }
+                            }
+                            estoqueRouter.Remover(id);
                             break;
     }     
     }
@@ -249,7 +270,7 @@ switch (option)
                             Console.WriteLine("\nFuncionarios cadastrados:");
                             
                             foreach (var c in produtos){
-                                Console.WriteLine($"\nFornecedor ID: {c.FornecedorId}\nCPF: {c.Nome}\nTelefone: {c.Preco}");
+                                Console.WriteLine($"\nFornecedor ID: {c.FornecedorId}\nNome do produto: {c.Nome}\nPreco do produto: {c.Preco}");
                             }  
                             
                             break;
