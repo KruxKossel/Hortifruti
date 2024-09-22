@@ -22,14 +22,15 @@ EstoqueRepository estoqueRepository = new(connectionString);
 EstoqueService estoqueService = new(estoqueRepository);
 EstoqueRouter estoqueRouter = new(estoqueService);
 
+// =============================== Itens de Venda ==================================
+ItensVendaRepository itensVendaRepository = new(connectionString);
+ItensVendaService itensVendaService = new(itensVendaRepository);
+
 // =================================== Vendas ==================================
 VendaRepository vendaRepository = new(connectionString);
 VendaService vendaService = new(vendaRepository);
-ItensVendaRepository itensVendaRepository = new(connectionString);
-ItensVendaService itensVendaService = new(itensVendaRepository);
-VendaRouter vendaRouter = new(vendaService,itensVendaService);
 
-// =============================== Itens de Venda ==================================
+VendaRouter vendaRouter = new(vendaService,itensVendaService);
 
 // ================================== Fornecedores ==================================
 FornecedorRepository fornecedorRepository = new(connectionString);
@@ -100,7 +101,7 @@ do
         Console.WriteLine("\n\nEntrada inválida! Por favor, insira um número.");
         option = 8;
     }
-    Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
+    // Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
     Console.ReadKey();
 
 } while (option != 0);

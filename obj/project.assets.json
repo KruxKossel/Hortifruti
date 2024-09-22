@@ -1535,11 +1535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Faculdade\\4Semestre\\Poo2\\Zipados do Murilo\\Hortifruti\\Hortifruti.csproj",
+      "projectUniqueName": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj",
       "projectName": "Hortifruti",
-      "projectPath": "E:\\Faculdade\\4Semestre\\Poo2\\Zipados do Murilo\\Hortifruti\\Hortifruti.csproj",
+      "projectPath": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj",
       "packagesPath": "C:\\Users\\ellen\\.nuget\\packages\\",
-      "outputPath": "E:\\Faculdade\\4Semestre\\Poo2\\Zipados do Murilo\\Hortifruti\\obj\\",
+      "outputPath": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ellen\\AppData\\Roaming\\NuGet\\NuGet.Config"
