@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Km1BfbmRbQfbDq0rq7uorQezCGBFYsFmj/foeoj35GkHGw7Pgl2k+e4TXaUkd0RqbJBIpq2tljG7VIinF+8Ow==",
+  "dgSpecHash": "HmvzebjTBlfLB0ngAdpbmDbrfv522YwdjlzhbJ+S+RY6nZd4dPj5xlldgUSEO3koDudvfb7Orm4aR2fZc3cMWA==",
   "success": true,
-  "projectFilePath": "E:\\Faculdade\\4Semestre\\Poo2\\BDConsole\\Hortifruti\\Hortifruti.csproj",
+  "projectFilePath": "E:\\Faculdade\\4Semestre\\Poo2\\Zipados do Murilo\\Hortifruti\\Hortifruti.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ellen\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\ellen\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
