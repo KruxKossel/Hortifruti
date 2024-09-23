@@ -29,7 +29,6 @@ ItensVendaService itensVendaService = new(itensVendaRepository);
 // =================================== Vendas ==================================
 VendaRepository vendaRepository = new(connectionString);
 VendaService vendaService = new(vendaRepository);
-
 VendaRouter vendaRouter = new(vendaService,itensVendaService);
 
 // ================================== Fornecedores ==================================
@@ -101,7 +100,7 @@ do
         Console.WriteLine("\n\nEntrada inválida! Por favor, insira um número.");
         option = 8;
     }
-    // Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
+    //Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
     Console.ReadKey();
 
 } while (option != 0);

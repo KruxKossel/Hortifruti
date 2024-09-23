@@ -1,0 +1,599 @@
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\Hortifruti.exe
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\Hortifruti.deps.json
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\Hortifruti.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\Hortifruti.pdb
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.sourcelink.json
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.Up2Date
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\refint\Hortifruti.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.pdb
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti\obj\Debug\net8.0\ref\Hortifruti.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.sourcelink.json
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\refint\Hortifruti.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.pdb
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\Hortifruti.exe
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\Hortifruti.deps.json
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\Hortifruti.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\Hortifruti.pdb
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.csproj.CopyComplete
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+C:\Users\mkt\OneDrive\Área de Trabalho\Hortifruti__\obj\Debug\net8.0\ref\Hortifruti.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\Hortifruti.exe
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\Hortifruti.deps.json
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\Hortifruti.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\Hortifruti.pdb
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.sourcelink.json
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.csproj.Up2Date
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\refint\Hortifruti.dll
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.pdb
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+C:\Users\Rafael Thomaz\Desktop\Hortifruti__\obj\Debug\net8.0\ref\Hortifruti.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\Hortifruti.exe
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\Hortifruti.deps.json
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.sourcelink.json
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.Up2Date
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\refint\Hortifruti.dll
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+C:\Users\muril\Desktop\hortifruti\Hortifruti\obj\Debug\net8.0\ref\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\Hortifruti.exe
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\EntityFramework.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.CodeDom.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Data.SqlClient.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Drawing.Common.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.sourcelink.json
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.CopyComplete
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\refint\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.pdb
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\Hortifruti.deps.json
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\bin\Debug\net8.0\Hortifruti.pdb
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+E:\Faculdade\4Semestre\Poo2\BDConsole\Hortifruti\obj\Debug\net8.0\ref\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\Hortifruti.exe
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\Hortifruti.deps.json
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.csproj.Up2Date
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\refint\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+C:\Users\muril\Desktop\Hortifruti-main\obj\Debug\net8.0\ref\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\refint\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\Hortifruti.exe
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\Hortifruti.deps.json
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.csproj.Up2Date
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+C:\Users\muril\Desktop\Hortifruti\Hortifruti-main\obj\Debug\net8.0\ref\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\refint\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.pdb
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\Hortifruti.exe
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\Hortifruti.deps.json
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\Hortifruti.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\Hortifruti.pdb
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\EntityFramework.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.CodeDom.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Data.SqlClient.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Drawing.Common.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.csproj.CopyComplete
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+E:\Faculdade\4Semestre\Poo2\Zipados do Murilo\Hortifruti\obj\Debug\net8.0\ref\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\Hortifruti.exe
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\Hortifruti.deps.json
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\Hortifruti.runtimeconfig.json
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Data.SQLite.EF6.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.csproj.AssemblyReference.cache
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.AssemblyInfoInputs.cache
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.AssemblyInfo.cs
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.csproj.CoreCompileInputs.cache
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.csproj.Up2Date
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\refint\Hortifruti.dll
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.pdb
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\Hortifruti.genruntimeconfig.cache
+C:\Users\muril\Desktop\Hortifruti-Murilo02\Hortifruti-Murilo02\obj\Debug\net8.0\ref\Hortifruti.dll
