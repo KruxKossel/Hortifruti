@@ -167,9 +167,14 @@ namespace Hortifruti.Menus
             string cargo;
 
             while(true){
-                Console.Write("Digite o novo nome:");
+                Console.Write("\n\nDigite o NOVO NOME:");
                 nome = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                if (string.IsNullOrWhiteSpace(nome))
+                {
+                    Console.WriteLine("\nNão foi informado Nome.");
+                    break;
+                }
+                else if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
                 {
                     break;
                 }
@@ -181,9 +186,14 @@ namespace Hortifruti.Menus
 
             while(true){
                 
-            Console.Write("Digite o novo cpf:");
+            Console.Write("\n\nDigite o NOVO CPF:");
             cpf = Console.ReadLine();
-            if(!string.IsNullOrWhiteSpace(cpf) && regexCpf.IsMatch(cpf))
+            if (string.IsNullOrWhiteSpace(cpf))
+            {
+                Console.WriteLine("\nNão foi informado CPF.");
+                break;
+            }
+            else if(!string.IsNullOrWhiteSpace(cpf) && regexCpf.IsMatch(cpf))
             {
                 break;
             }
@@ -194,8 +204,13 @@ namespace Hortifruti.Menus
             }
 
             while (true){
-                Console.Write("Digite o novo cargo:");
+                Console.Write("\n\nDigite o NOVO CARGO:");
                 cargo = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(cargo))
+                {
+                    Console.WriteLine("\nNão foi informado Cargo.");
+                    break;
+                }
                 if (!string.IsNullOrWhiteSpace(cargo) && regexNome.IsMatch(cargo))
                 {
                     break;
@@ -210,7 +225,6 @@ namespace Hortifruti.Menus
 
             return (funcionario, id);
         }
-
         public static (Venda, int) AtualizarVenda(){
 
             int id = CriarId();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7t396MTj4FQ=",
+  "dgSpecHash": "oGojzQcRmjo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\muril\\Desktop\\Hortifruti\\Hortifruti\\Hortifruti.csproj",
+  "projectFilePath": "C:\\Users\\muril\\Desktop\\Hortifruti-Murilo02\\Hortifruti-Murilo02\\Hortifruti.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\muril\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\muril\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

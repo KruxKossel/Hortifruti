@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\muril\\Desktop\\Hortifruti\\Hortifruti\\Hortifruti.csproj": {}
+    "C:\\Users\\muril\\Desktop\\Hortifruti-Murilo02\\Hortifruti-Murilo02\\Hortifruti.csproj": {}
   },
   "projects": {
-    "C:\\Users\\muril\\Desktop\\Hortifruti\\Hortifruti\\Hortifruti.csproj": {
+    "C:\\Users\\muril\\Desktop\\Hortifruti-Murilo02\\Hortifruti-Murilo02\\Hortifruti.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\muril\\Desktop\\Hortifruti\\Hortifruti\\Hortifruti.csproj",
+        "projectUniqueName": "C:\\Users\\muril\\Desktop\\Hortifruti-Murilo02\\Hortifruti-Murilo02\\Hortifruti.csproj",
         "projectName": "Hortifruti",
-        "projectPath": "C:\\Users\\muril\\Desktop\\Hortifruti\\Hortifruti\\Hortifruti.csproj",
+        "projectPath": "C:\\Users\\muril\\Desktop\\Hortifruti-Murilo02\\Hortifruti-Murilo02\\Hortifruti.csproj",
         "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\muril\\Desktop\\Hortifruti\\Hortifruti\\obj\\",
+        "outputPath": "C:\\Users\\muril\\Desktop\\Hortifruti-Murilo02\\Hortifruti-Murilo02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\muril\\AppData\\Roaming\\NuGet\\NuGet.Config",

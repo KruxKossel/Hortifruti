@@ -73,41 +73,110 @@ namespace Hortifruti.Repositories
 
             var (funcionario, id) = AtualizarEntidade.AtualizarFuncionario();
 
-            if (string.IsNullOrWhiteSpace(funcionario.Nome))
-                {
-                    Console.WriteLine("Erro: Nome do funcionário não pode ser vazio.");
-                    return funcionarioAtualizado;
-                }
-                 if (string.IsNullOrWhiteSpace(funcionario.Cpf))
-                {
-                    Console.WriteLine("Erro: CPF do funcionário não pode ser vazio.");
-                    return funcionarioAtualizado;
-                }
-
             try
             {
-                var connection = new HortifrutiContext(_connectionString);
-                using (connection.DbConnection())
+                if (!string.IsNullOrWhiteSpace(funcionario.Nome) && !string.IsNullOrWhiteSpace(funcionario.Cpf) && !string.IsNullOrWhiteSpace(funcionario.Cargo))
                 {
-                    using (var comando = connection.DbConnection().CreateCommand())
+                    var connection = new HortifrutiContext(_connectionString);
+                    using (connection.DbConnection())
                     {
-                        comando.CommandText = "UPDATE funcionarios SET Nome = @nome, CPF = @cpf, Cargo = @cargo WHERE Id = @id";
-                        comando.Parameters.AddWithValue("@id", id);
-                        comando.Parameters.AddWithValue("@nome",funcionario.Nome);
-                        comando.Parameters.AddWithValue("@cpf", funcionario.Cpf );
-                        comando.Parameters.AddWithValue("@cargo",funcionario.Cargo);
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE funcionarios SET Nome = @nome, CPF = @cpf, Cargo = @cargo WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@nome", funcionario.Nome);
+                            comando.Parameters.AddWithValue("@cpf", funcionario.Cpf );
+                            comando.Parameters.AddWithValue("@cargo", funcionario.Cargo);
 
-                        int linhasAfetadas = comando.ExecuteNonQuery();
-                        if (linhasAfetadas > 0)
-                        {
-                            Console.WriteLine("Dados atualizados com sucesso");
-                            funcionarioAtualizado.Add(funcionario);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Nenhum dado encontrado");
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("Dados atualizados com sucesso");
+                                funcionarioAtualizado.Add(funcionario);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nenhum dado encontrado");
+                            }
                         }
                     }
+                }
+                else if (!string.IsNullOrWhiteSpace(funcionario.Nome) && string.IsNullOrWhiteSpace(funcionario.Cpf) && string.IsNullOrWhiteSpace(funcionario.Cargo))
+                {
+                    var connection = new HortifrutiContext(_connectionString);
+                    using (connection.DbConnection())
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE funcionarios SET Nome = @nome WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@nome", funcionario.Nome);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("Nome atualizado com sucesso");
+                                funcionarioAtualizado.Add(funcionario);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nenhum dado encontrado");
+                            }
+                        }
+                    }
+                }
+                else if (!string.IsNullOrWhiteSpace(funcionario.Cpf) && string.IsNullOrWhiteSpace(funcionario.Nome) && string.IsNullOrWhiteSpace(funcionario.Cargo)) 
+                { 
+                    var connection = new HortifrutiContext(_connectionString);
+                    using (connection.DbConnection())
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE funcionarios SET CPF = @cpf WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@cpf", funcionario.Cpf );
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("CPF atualizados com sucesso");
+                                funcionarioAtualizado.Add(funcionario);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nenhum dado encontrado");
+                            }
+                        }
+                    }
+                } 
+                else if(!string.IsNullOrWhiteSpace(funcionario.Cargo) && string.IsNullOrWhiteSpace(funcionario.Cpf) && string.IsNullOrWhiteSpace(funcionario.Nome))
+                {
+                    var connection = new HortifrutiContext(_connectionString);
+                    using (connection.DbConnection())
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE funcionarios SET Cargo = @cargo WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@cargo", funcionario.Cargo);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("Cargo atualizados com sucesso");
+                                funcionarioAtualizado.Add(funcionario);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nenhum dado encontrado");
+                            }
+                        }
+                    }
+                } 
+                else 
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nNenhum dado inserido!\n\n");
                 }
             }
             catch (SQLiteException sqLiteEx)
