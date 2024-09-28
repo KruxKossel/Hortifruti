@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Threading.Tasks;
 using Hortifruti.Database.Configurations;
+using Hortifruti.Menus;
 using Hortifruti.Models;
 
 namespace Hortifruti.Repositories
@@ -78,7 +79,113 @@ namespace Hortifruti.Repositories
 
         public List<Produto> Atualizar()
         {
-            throw new NotImplementedException();
+            List<Produto> produtoAtualizado = [];
+
+            var (entidade, id) = AtualizarEntidade.AtualizarProduto();
+
+            try
+            {
+                var connection = new HortifrutiContext(_connectionString);
+                using (connection.DbConnection())
+                {
+
+                    // checa id
+                    using (var checkCommand = connection.DbConnection().CreateCommand())
+                    {
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM produtos WHERE id = @id";
+                        checkCommand.Parameters.AddWithValue("@id", id);
+
+                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\n\nID {id} não existe. \n");
+                            return produtoAtualizado;
+                        }
+                    }
+
+                    if(!string.IsNullOrWhiteSpace(entidade.Nome) && entidade.Preco != 0.1m)
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE produtos SET Nome = @nome, Preco = @preco WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@nome", entidade.Nome);
+                            comando.Parameters.AddWithValue("@preco", entidade.Preco);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 1)
+                            {
+                                Console.WriteLine("Dados atualizados com sucesso");
+                                produtoAtualizado.Add(entidade);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nenhum dado alterado!");
+                            }
+                        }
+                    } 
+                    else if (!string.IsNullOrWhiteSpace(entidade.Nome) && entidade.Preco == 0.1m)
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE produtos SET Nome = @nome WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@nome", entidade.Nome);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("Produto atualizado com sucesso");
+                                produtoAtualizado.Add(entidade);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Produto não alterado");
+                            }
+                        }
+                    }
+                    else if (string.IsNullOrWhiteSpace(entidade.Nome)  && entidade.Preco != 0.1m)
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE produtos SET Preco = @preco WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@cpf", entidade.Preco);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("Preço atualizado com sucesso");
+                                produtoAtualizado.Add(entidade);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Preço não alterado!");
+                            }
+                        }
+                    }
+                    else 
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\nNenhum dado inserido!\n\n");
+                    }
+                }
+            }
+            catch (SQLiteException sqLiteEx)
+            {
+                Console.WriteLine("Erro SQLite: " + sqLiteEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro geral: " + ex.Message);
+            }
+    
+            return produtoAtualizado;
         }
 
         public List<Produto> Listar()

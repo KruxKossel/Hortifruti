@@ -67,22 +67,11 @@ namespace Hortifruti.Repositories
 
             var (fornecedor, id) = AtualizarEntidade.AtualizarFornecedor();
 
-            if (string.IsNullOrWhiteSpace(fornecedor.RazaoSocial))
-            {
-                Console.WriteLine("Erro: Razao Social do fornecedor não pode ser vazia.");
-                return fornecedorAtualizado;
-            }
-
-            if (string.IsNullOrWhiteSpace(fornecedor.Cnpj))
-            {
-                Console.WriteLine("Erro: CNPJ do fornecedor não pode ser vazio.");
-                return fornecedorAtualizado;
-            }
-
             try
             {
                 var connection = new HortifrutiContext(_connectionString);
-                using (connection.DbConnection())
+
+                if(!string.IsNullOrWhiteSpace(fornecedor.RazaoSocial) && !string.IsNullOrWhiteSpace(fornecedor.Cnpj) && !string.IsNullOrWhiteSpace(fornecedor.Telefone))
                 {
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
@@ -93,17 +82,84 @@ namespace Hortifruti.Repositories
                         comando.Parameters.AddWithValue("@telefone", fornecedor.Telefone);
 
                         int linhasAfetadas = comando.ExecuteNonQuery();
-                        if (linhasAfetadas > 0)
+                        if (linhasAfetadas > 2)
                         {
-                            Console.WriteLine("Dados atualizados com sucesso");
+                            Console.WriteLine("Dados atualizados com sucesso!");
                             fornecedorAtualizado.Add(fornecedor);
                         }
                         else
                         {
-                            Console.WriteLine("Nenhum dado encontrado");
+                            Console.WriteLine("Nenhum dado alterado...");
                         }
                     }
                 }
+                else if(!string.IsNullOrWhiteSpace(fornecedor.RazaoSocial) && string.IsNullOrWhiteSpace(fornecedor.Cnpj) && string.IsNullOrWhiteSpace(fornecedor.Telefone))
+                {
+                    using (var comando = connection.DbConnection().CreateCommand())
+                    {
+                        comando.CommandText = "UPDATE fornecedores SET Razao_Social = @razao_social WHERE Id = @id";
+                        comando.Parameters.AddWithValue("@id", id);
+                        comando.Parameters.AddWithValue("@razao_social", fornecedor.RazaoSocial);
+
+                        int linhasAfetadas = comando.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            Console.WriteLine("Razão Social atualizada com sucesso!");
+                            fornecedorAtualizado.Add(fornecedor);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Razão Social não alterada...");
+                        }
+                    }
+                }
+                else if(string.IsNullOrWhiteSpace(fornecedor.RazaoSocial) && !string.IsNullOrWhiteSpace(fornecedor.Cnpj) && string.IsNullOrWhiteSpace(fornecedor.Telefone))
+                {
+                    using (var comando = connection.DbConnection().CreateCommand())
+                    {
+                        comando.CommandText = "UPDATE fornecedores SET CNPJ = @cnpj WHERE Id = @id";
+                        comando.Parameters.AddWithValue("@id", id);
+                        comando.Parameters.AddWithValue("@cnpj", fornecedor.Cnpj);
+
+                        int linhasAfetadas = comando.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            Console.WriteLine("CNPJ atualizado com sucesso!");
+                            fornecedorAtualizado.Add(fornecedor);
+                        }
+                        else
+                        {
+                            Console.WriteLine("CNPJ não alterado....");
+                        }
+                    }
+                }
+                else if(string.IsNullOrWhiteSpace(fornecedor.RazaoSocial) && string.IsNullOrWhiteSpace(fornecedor.Cnpj) && !string.IsNullOrWhiteSpace(fornecedor.Telefone))
+                {
+                    using (var comando = connection.DbConnection().CreateCommand())
+                    {
+                        comando.CommandText = "UPDATE fornecedores SET Telefone = @telefone WHERE Id = @id";
+                        comando.Parameters.AddWithValue("@id", id);
+                        comando.Parameters.AddWithValue("@telefone", fornecedor.Telefone);
+
+                        int linhasAfetadas = comando.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            Console.WriteLine("Telefone atualizado com sucesso");
+                            fornecedorAtualizado.Add(fornecedor);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Telefone não alterado...");
+                        }
+                    }
+                }
+                else 
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nNenhum dado inserido!\n\n");
+                }
+
+                
             }
             catch (SQLiteException sqLiteEx)
             {
@@ -174,7 +230,7 @@ namespace Hortifruti.Repositories
                             Console.WriteLine("Fornecedor removido com sucesso!");
                             return true;
                         }else{
-                            Console.WriteLine("Fornecedor encontrado com id especificado");
+                            Console.WriteLine("Fornecedor não encontrado...");
                             return false;
                         }
                     }

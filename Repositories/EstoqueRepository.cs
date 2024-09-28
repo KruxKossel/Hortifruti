@@ -42,7 +42,7 @@ namespace Hortifruti.Repositories
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
 
-                        comando.CommandText = "INSERT INTO estoque (ProdutoId, Quantidade) VALUES (@produtoId,@quantidade)";
+                        comando.CommandText = "INSERT INTO estoque (ProdutoId, Quantidade) VALUES (@produtoId, @quantidade)";
                         comando.Parameters.AddWithValue("@produtoId", entidade.ProdutoId);
                         comando.Parameters.AddWithValue("@quantidade", entidade.Quantidade);
                         comando.ExecuteNonQuery();
@@ -69,7 +69,7 @@ namespace Hortifruti.Repositories
 
         public List<Estoque> Atualizar()
         {
-            List<Estoque> estoques = new List<Estoque>();
+            List<Estoque> estoqueAtualizado = new List<Estoque>();
 
             var (estoque, id) = AtualizarEntidade.AtualizarEstoque();
 
@@ -78,6 +78,26 @@ namespace Hortifruti.Repositories
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {
+
+                    // checa id
+                    using (var checkCommand = connection.DbConnection().CreateCommand())
+                    {
+                        checkCommand.CommandText = "SELECT COUNT(1) FROM estoque WHERE id = @id";
+                        checkCommand.Parameters.AddWithValue("@id", id);
+
+                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\n\nID {id} não existe. \n");
+                            return estoqueAtualizado;
+                        }
+                    }
+
                     using (var comando = connection.DbConnection().CreateCommand())
                     {
                         comando.CommandText = "UPDATE estoque SET ProdutoId = @produtoId, Quantidade = @quantidade WHERE Id = @id";
@@ -90,11 +110,11 @@ namespace Hortifruti.Repositories
                         if (linhasAfetadas > 0)
                         {
                             Console.WriteLine("Dados atualizados com sucesso");
-                            estoques.Add(estoque);
+                            estoqueAtualizado.Add(estoque);
                         }
                         else
                         {
-                            Console.WriteLine("Nenhum dado encontrado");
+                            Console.WriteLine("Nenhum dado alterado");
                         }
                     }
                 }
@@ -107,7 +127,7 @@ namespace Hortifruti.Repositories
             {
                 Console.WriteLine("Erro geral: " + ex.Message);
             }
-            return estoques;
+            return estoqueAtualizado;
         }
 
         public List<Estoque> Listar()
@@ -179,10 +199,10 @@ namespace Hortifruti.Repositories
                         int linhasAfetadas = comando.ExecuteNonQuery();
 
                         if(linhasAfetadas>0){
-                            Console.WriteLine("\nCliente removido com sucesso!");
+                            Console.WriteLine("\nProduto removido com sucesso do Estoque!");
                             return true;
                         }else{
-                            Console.WriteLine("\nCliente não encontrado");
+                            Console.WriteLine("\nProduto não encontrado no Estoque");
                             return false;
                         }
                     }

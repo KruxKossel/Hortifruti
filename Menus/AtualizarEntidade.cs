@@ -35,6 +35,75 @@ namespace Hortifruti.Menus
             return id;
         }
 
+        public static (Produto, int) AtualizarProduto(){
+            int fornecedorId;
+            string nome;
+            decimal preco;
+            int id = CriarId();
+
+            while (true)
+            {
+                Console.Write("\nDigite o novo ID do Fornecedor: ");
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("\nNão foi informado o ID do Fornecedor.");
+                    fornecedorId = 0;
+                    break;
+                }
+                else if (int.TryParse(input, out fornecedorId))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                }
+            }
+
+            while (true)
+            {
+                Console.Write("\nDigite o NOME do Produto: ");
+                nome = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(nome))
+                {
+                    Console.WriteLine("\nNão foi informado o nome do produto.");
+                    break;
+                }
+                else if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nNome inválido. Por favor, digite um nome sem números ou caracteres especiais.\n");
+                }
+            }
+
+            while (true)
+            {
+                Console.Write("\nDigite o PREÇO do Produto: ");
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("\nNão foi informado o preço do produto.");
+                    preco = 0.1m;
+                    break;
+                }
+                else if (decimal.TryParse(input, out preco))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n\nValor inválido. Por favor, digite um número decimal.\n");
+                }
+            }
+
+            Produto produto = new Produto(fornecedorId, nome, preco);
+
+            return (produto, id);
+        }
 
         public static (Cliente, int) AtualizarCliente(){
 
@@ -47,7 +116,12 @@ namespace Hortifruti.Menus
             {
                 Console.Write("\nDigite o novo NOME: ");
                 nome = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
+                if (string.IsNullOrWhiteSpace(nome))
+                {
+                    Console.WriteLine("\nNão foi informado Nome.");
+                    break;
+                }
+                else if (!string.IsNullOrWhiteSpace(nome) && regexNome.IsMatch(nome))
                 {
                     break;
                 }
@@ -111,7 +185,12 @@ namespace Hortifruti.Menus
             {
                 Console.Write("Digite a nova razão social:");
                 razaoSocial = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(razaoSocial) && regexNome.IsMatch(razaoSocial))
+                if (string.IsNullOrWhiteSpace(razaoSocial))
+                {
+                    Console.WriteLine("\nNão foi informado Razão social.");
+                    break;
+                }
+                else if (!string.IsNullOrWhiteSpace(razaoSocial) && regexNome.IsMatch(razaoSocial))
                 {
                     break;
                 }
@@ -125,7 +204,12 @@ namespace Hortifruti.Menus
             {
                 Console.Write("Digite o novo CNPJ:");
                 cnpj = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(cnpj) && regexCnpj.IsMatch(cnpj))
+                if (string.IsNullOrWhiteSpace(cnpj))
+                {
+                    Console.WriteLine("\nNão foi informado CNPJ.");
+                    break;
+                }
+                else if (!string.IsNullOrWhiteSpace(cnpj) && regexCnpj.IsMatch(cnpj))
                 {
                     break;
                 }
@@ -248,7 +332,7 @@ namespace Hortifruti.Menus
             }
             while (true)
             {
-                Console.Write("\nDigite o novo Id do cliente: ");
+                Console.Write("\nDigite o novo Id dos itens da venda: ");
                 if (int.TryParse(Console.ReadLine(), out itensVendaId))
                 {
                     break;
