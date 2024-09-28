@@ -98,205 +98,207 @@ namespace Hortifruti.Menus
         }   
         public static void SwitchCliente(ClienteRouter clienteRouter, int option){
             switch (option)
+            {
+                case 1:
+                    Cliente cliente = CriarEntidade.CriarCliente();
+                    clienteRouter.Adicionar(cliente);
+                break;
+                case 2:
+                
+                    List<Cliente> clientes = clienteRouter.Listar();
+                    
+                    Console.WriteLine("\nClientes cadastrados:");
+                    
+                    foreach (var c in clientes)
                     {
-                        case 1:
-                            Cliente cliente = CriarEntidade.CriarCliente();
-                            clienteRouter.Adicionar(cliente);
+                        Console.WriteLine($"\nNome: {c.Nome}\nCPF: {c.Cpf}\nTelefone: {c.Telefone}");
+                    }  
+                break;
+                case 3:
+                    List<Cliente> clienteAtualizado = clienteRouter.Atualizar();
+                    Console.WriteLine("\nClientes atualizados:");
+                    foreach (var c in clienteAtualizado)
+                    {
+                        Console.WriteLine($"\n\nNome: {c.Nome}, CPF: {c.Cpf}, Telefone: {c.Telefone}\n");
+                    }
+                break;
+                case 4:
+                    int id;
+                    
+                    while (true)
+                    {
+                        Console.WriteLine("Digite o ID do Cliente a ser removido: ");
+                        if (int.TryParse(Console.ReadLine(), out id))
+                        {
                             break;
-                        case 2:
-                        
-                            List<Cliente> clientes = clienteRouter.Listar();
-                            
-                            Console.WriteLine("\nClientes cadastrados:");
-                            
-                            foreach (var c in clientes){
-                                Console.WriteLine($"\nNome: {c.Nome}\nCPF: {c.Cpf}\nTelefone: {c.Telefone}");
-                            }  
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                        }
+                    }
+                    clienteRouter.Remover(id);
+                break;
+            }
+        }
+        public static void SwitchEstoque(EstoqueRouter estoqueRouter, int option)
+        {
+            switch (option)
+            {
+                case 1:
+                    Estoque estoque = CriarEntidade.CriarEstoque();
+                    estoqueRouter.Adicionar(estoque);
+                break;
+                case 2:
+                    List<Estoque> estoques = estoqueRouter.Listar();
+                    
+                    Console.WriteLine("\nEstoque cadastrado:");
+
+                    foreach(var e in estoques){
+                        Console.WriteLine($"\nProduto ID: {e.ProdutoId}\nQuantidade: {e.Quantidade}\n");
+                    }
+                break;
+                case 3:
+                    estoqueRouter.Atualizar();
+                break;
+                case 4:
+                    int id;
+                    
+                    while (true)
+                    {
+                        Console.WriteLine("Digite o ID do Estoque a ser removido: ");
+                        if (int.TryParse(Console.ReadLine(), out id))
+                        {
                             break;
-                        case 3:
-                            List<Cliente> clienteAtualizado = clienteRouter.Atualizar();
-                            Console.WriteLine("\nClientes atualizados:");
-                            foreach (var c in clienteAtualizado)
-                            {
-                                Console.WriteLine($"\n\nID: {c.Id}, Nome: {c.Nome}, CPF: {c.Cpf}, Telefone: {c.Telefone}\n");
-                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                        }
+                    }
+                    estoqueRouter.Remover(id);
+                break;
+            }     
+        }
+        public static void SwitchFornecedor(FornecedorRouter fornecedorRouter, int option){
+            switch (option)
+            {
+                case 1:
+                    Fornecedor fornecedor = CriarEntidade.CriarFornecedor();
+                    fornecedorRouter.Adicionar(fornecedor);
+                    break;
+                case 2:
+                    List<Fornecedor> fornecedores = fornecedorRouter.Listar();
+                    
+                    Console.WriteLine("\nFornecedores cadastrados:");
+
+                    foreach(var c in fornecedores){
+                        Console.WriteLine($"\n\nRazao Social: {c.RazaoSocial}\nCNPJ: {c.Cnpj}\nTelefone: {c.Telefone}");
+                    }
+                    break;
+                case 3:
+                    fornecedorRouter.Atualizar();
+                break;
+                case 4:
+                    int id;
+                    
+                    while (true)
+                    {
+                        Console.WriteLine("Digite o ID do Fornecedor a ser removido: ");
+                        if (int.TryParse(Console.ReadLine(), out id))
+                        {
                             break;
-                        case 4:
-                            int id;
-                            
-                             while (true)
-                            {
-                                Console.WriteLine("Digite o ID do Cliente a ser removido: ");
-                                if (int.TryParse(Console.ReadLine(), out id))
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                                }
-                            }
-                            clienteRouter.Remover(id);
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                        }
+                    }
+                    fornecedorRouter.Remover(id); 
+                break;
+            }
+        }
+        public static void SwitchFuncionario(FuncionarioRouter funcionarioRouter, int option){
+            switch (option)
+            {
+                case 1:
+                    Funcionario funcionario = CriarEntidade.CriarFuncionario();
+                    funcionarioRouter.Adicionar(funcionario);
+
+                break;
+                case 2:
+                    List<Funcionario> funcionarios = funcionarioRouter.Listar();
+                    
+                    Console.WriteLine("\nFuncionarios cadastrados:");
+                    
+                    foreach (var c in funcionarios){
+                        Console.WriteLine($"\n\nNome: {c.Nome}\nCPF: {c.Cpf}\nCargo: {c.Cargo}");
+                    }  
+                    
+                break;
+                case 3:
+                    funcionarioRouter.Atualizar();
+                break;
+                case 4:
+                    int id;
+                    
+                    while (true)
+                    {
+                        Console.WriteLine("Digite o ID do Funcionario a ser removido: ");
+                        if (int.TryParse(Console.ReadLine(), out id))
+                        {
                             break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                        }
+                    }
+                    funcionarioRouter.Remover(id);
+                break;
+            }
+        }
+        public static void SwitchProduto(ProdutoRouter produtoRouter, int option){
+        switch (option)
+        {
+            case 1:
+                Produto produto = CriarEntidade.CriarProduto();
+                produtoRouter.Adicionar(produto);
+            break;
+            case 2:
+                List<Produto> produtos = produtoRouter.Listar();
+                
+                Console.WriteLine("\nProdutos cadastrados:");
+                
+                foreach (var c in produtos){
+                    Console.WriteLine($"\n\nFornecedor ID: {c.FornecedorId}\nNome do produto: {c.Nome}\nPreco do produto: {c.Preco}");
+                }  
+                
+            break;
+            case 3:
+                produtoRouter.Atualizar();  
+            break;
+            case 4:
+                int id;
+                
+                while (true)
+
+                {
+                    Console.WriteLine("Digite o ID do Produto a ser removido: ");
+                    if (int.TryParse(Console.ReadLine(), out id))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
+                    }
+                }
+                produtoRouter.Remover(id); 
+            break;
         }
     }
-    public static void SwitchEstoque(EstoqueRouter estoqueRouter, int option){
-    switch (option)
-                    {
-                        case 1:
-                            Estoque estoque = CriarEntidade.CriarEstoque();
-                            estoqueRouter.Adicionar(estoque);
-                            break;
-                        case 2:
-                            List<Estoque> estoques = estoqueRouter.Listar();
-                            
-                            Console.WriteLine("\nEstoque cadastrado:");
-
-                            foreach(var e in estoques){
-                                Console.WriteLine($"\nProduto Id {e.ProdutoId}\nQuantidade {e.Quantidade}\n");
-                            }
-                            break;
-                        case 3:
-                            estoqueRouter.Atualizar();
-                            break;
-                        case 4:
-                             int id;
-                            
-                             while (true)
-                            {
-                                Console.WriteLine("Digite o ID do Estoque a ser removido: ");
-                                if (int.TryParse(Console.ReadLine(), out id))
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                                }
-                            }
-                            estoqueRouter.Remover(id);
-                            break;
-    }     
-    }
-    public static void SwitchFornecedor(FornecedorRouter fornecedorRouter, int option){
-    switch (option)
-                    {
-                        case 1:
-                            Fornecedor fornecedor = CriarEntidade.CriarFornecedor();
-                            fornecedorRouter.Adicionar(fornecedor);
-                            break;
-                        case 2:
-                            List<Fornecedor> fornecedores = fornecedorRouter.Listar();
-                            
-                            Console.WriteLine("\nFornecedores cadastrados:");
-
-                            foreach(var c in fornecedores){
-                                Console.WriteLine($"\nRazao Social: {c.RazaoSocial}\nCNPJ: {c.Cnpj}\nTelefone: {c.Telefone}");
-                            }
-                            break;
-                        case 3:
-                        
-                            
-                            fornecedorRouter.Atualizar();
-
-                            break;
-                        case 4:
-                            int id;
-                            
-                             while (true)
-                            {
-                                Console.WriteLine("Digite o ID do Fornecedor a ser removido: ");
-                                if (int.TryParse(Console.ReadLine(), out id))
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                                }
-                            }
-                            fornecedorRouter.Remover(id); 
-                            break;}
-    }
-    public static void SwitchFuncionario(FuncionarioRouter funcionarioRouter, int option){
-switch (option)
-                    {
-                        case 1:
-                            Funcionario funcionario = CriarEntidade.CriarFuncionario();
-                            funcionarioRouter.Adicionar(funcionario);
-
-                            break;
-                        case 2:
-                             List<Funcionario> funcionarios = funcionarioRouter.Listar();
-                            
-                            Console.WriteLine("\nFuncionarios cadastrados:");
-                            
-                            foreach (var c in funcionarios){
-                                Console.WriteLine($"\nNome: {c.Nome}\nCPF: {c.Cpf}\nTelefone: {c.Cargo}");
-                            }  
-                            
-                            break;
-                        case 3:
-                            funcionarioRouter.Atualizar();
-                            break;
-                        case 4:
-                            int id;
-                            
-                             while (true)
-                            {
-                                Console.WriteLine("Digite o ID do Funcionario a ser removido: ");
-                                if (int.TryParse(Console.ReadLine(), out id))
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                                }
-                            }
-                            funcionarioRouter.Remover(id);
-                            break;}
-    }
-    public static void SwitchProduto(ProdutoRouter produtoRouter, int option){
-     switch (option)
-                    {
-                        case 1:
-                            Produto produto = CriarEntidade.CriarProduto();
-                            produtoRouter.Adicionar(produto);
-                            break;
-                        case 2:
-                            List<Produto> produtos = produtoRouter.Listar();
-                            
-                            Console.WriteLine("\nFuncionarios cadastrados:");
-                            
-                            foreach (var c in produtos){
-                                Console.WriteLine($"\nFornecedor ID: {c.FornecedorId}\nNome do produto: {c.Nome}\nPreco do produto: {c.Preco}");
-                            }  
-                            
-                            break;
-                        case 3:
-                            //
-                            break;
-                        case 4:
-                             int id;
-                            
-                             while (true)
-
-                            {
-                                Console.WriteLine("Digite o ID do Produto a ser removido: ");
-                                if (int.TryParse(Console.ReadLine(), out id))
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("\n\nID inválido. Por favor, digite um número inteiro.\n");
-                                }
-                            }
-                            produtoRouter.Remover(id); 
-                            break;}
-    }
-    public static void SwitchVenda(VendaRouter vendaRouter, int option){
+        public static void SwitchVenda(VendaRouter vendaRouter, int option){
         switch (option)
                     {
                         case 1:

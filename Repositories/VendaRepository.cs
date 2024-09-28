@@ -83,63 +83,99 @@ namespace Hortifruti.Repositories
 
         public List<Venda> Atualizar()
         {
-            List<Venda> VendasAtt = [];
 
-           var (entidade, id) = AtualizarEntidade.AtualizarVenda();
+            throw new NotImplementedException();
 
-            try
-            {
-                var connection = new HortifrutiContext(_connectionString);
-                using (connection.DbConnection())
-                {
+            //ta com uns erro na hora de dar up, ADICIONAR LÓGICA DE ATUALIZAÇÃO
 
-                   // checa id
-                    using (var checkCommand = connection.DbConnection().CreateCommand())
-                    {
-                        checkCommand.CommandText = "SELECT COUNT(1) FROM vendas WHERE Id = @id";
-                        checkCommand.Parameters.AddWithValue("@id", id);
+        //     List<Venda> VendaAtualizada = [];
 
-                        var count = Convert.ToInt32(checkCommand.ExecuteScalar());
-                        if (count > 0)
-                        {
-                            Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
-                            Console.ReadKey();
-                        }
-                        else
-                        {
-                            Console.WriteLine($"\n\nID {id} não existe. \n");
-                            return VendasAtt;
-                        }
-                    }
+        //    var (entidade, id) = AtualizarEntidade.AtualizarVenda();
 
-                    using (var comando = connection.DbConnection().CreateCommand())
-                    {
-                        comando.CommandText = "UPDATE vendas SET ClienteId = @clienteid, WHERE Id = @id";
-                        comando.Parameters.AddWithValue("@id", id);
-                        comando.Parameters.AddWithValue("@clienteid", entidade.ClienteId);
+        //     try
+        //     {
+        //         var connection = new HortifrutiContext(_connectionString);
+        //         using (connection.DbConnection())
+        //         {
 
-                        int linhasAfetadas = comando.ExecuteNonQuery();
-                        if (linhasAfetadas > 0)
-                        {
-                            Console.WriteLine("Dados atualizados com sucesso");
-                            VendasAtt.Add(entidade);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Nenhum dado encontrado");
-                        }
-                    }
-                }
-            }
-            catch (SQLiteException sqLiteEx)
-            {
-                Console.WriteLine("Erro SQLite: " + sqLiteEx.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro geral: " + ex.Message);
-            }
-            return VendasAtt;
+        //            // checa id
+        //             using (var checkCommand = connection.DbConnection().CreateCommand())
+        //             {
+        //                 checkCommand.CommandText = "SELECT COUNT(1) FROM vendas WHERE Id = @id";
+        //                 checkCommand.Parameters.AddWithValue("@id", id);
+
+        //                 var count = Convert.ToInt32(checkCommand.ExecuteScalar());
+        //                 if (count > 0)
+        //                 {
+        //                     Console.WriteLine($"\nID {id} encontrado no banco de dados.\n");
+        //                     Console.ReadKey();
+        //                 }
+        //                 else
+        //                 {
+        //                     Console.WriteLine($"\n\nID {id} não existe. \n");
+        //                     return VendaAtualizada;
+        //                 }
+        //             }
+
+        //             // checa id fk
+        //             using (var checkCommand = connection.DbConnection().CreateCommand())
+        //             {
+        //                 checkCommand.CommandText = @"SELECT 
+        //                                                 (SELECT COUNT(1) FROM clientes WHERE id = @clienteId) AS ClienteCount,
+        //                                                 (SELECT COUNT(1) FROM itens_venda WHERE id = @itensVendaId) AS ItensVendaCount";
+        //                 checkCommand.Parameters.AddWithValue("@clienteId", entidade.ClienteId);
+        //                 checkCommand.Parameters.AddWithValue("@itensVendaId", entidade.ItensVendaId);
+
+        //                 using (var reader = checkCommand.ExecuteReader())
+        //                 {
+        //                     if (reader.Read())
+        //                     {
+        //                         var clienteCount = Convert.ToInt32(reader["ClienteCount"]);
+        //                         var itensVendaCount = Convert.ToInt32(reader["ItensVendaCount"]);
+
+        //                         if (clienteCount > 0 && itensVendaCount > 0)
+        //                         {
+        //                             Console.WriteLine($"\nID {entidade.ClienteId} encontrado na tabela 'clientes' e ID {entidade.ItensVendaId} encontrado na tabela 'itens_venda'.\n");
+        //                             Console.ReadKey();
+        //                         }
+        //                         else
+        //                         {
+        //                             Console.WriteLine($"\n\nID {entidade.ClienteId} ou ID {entidade.ItensVendaId} não existem. \n");
+        //                             return VendaAtualizada;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+
+        //             // jss tem q fazer isso td aqui (algum dia) 
+        //             using (var comando = connection.DbConnection().CreateCommand())
+        //             {
+        //                 comando.CommandText = "UPDATE vendas SET ClienteId = @clienteid, WHERE Id = @id";
+        //                 comando.Parameters.AddWithValue("@id", id);
+        //                 comando.Parameters.AddWithValue("@clienteid", entidade.ClienteId);
+
+        //                 int linhasAfetadas = comando.ExecuteNonQuery();
+        //                 if (linhasAfetadas > 0)
+        //                 {
+        //                     Console.WriteLine("Dados atualizados com sucesso");
+        //                     VendaAtualizada.Add(entidade);
+        //                 }
+        //                 else
+        //                 {
+        //                     Console.WriteLine("Nenhum dado encontrado");
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     catch (SQLiteException sqLiteEx)
+        //     {
+        //         Console.WriteLine("Erro SQLite: " + sqLiteEx.Message);
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         Console.WriteLine("Erro geral: " + ex.Message);
+        //     }
+        //     return VendaAtualizada;
         }
 
         public List<Venda> Listar()
@@ -218,10 +254,10 @@ namespace Hortifruti.Repositories
                         int linhasAfetadas = comando.ExecuteNonQuery();
 
                         if(linhasAfetadas>0){
-                            Console.WriteLine("\nCliente removido com sucesso!");
+                            Console.WriteLine("\nVenda removido com sucesso!");
                             return true;
                         }else{
-                            Console.WriteLine("\nCliente não encontrado");
+                            Console.WriteLine("\nVenda não encontrado");
                             return false;
                         }
                     }

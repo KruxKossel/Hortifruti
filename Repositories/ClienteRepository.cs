@@ -65,13 +65,6 @@ namespace Hortifruti.Repositories
 
            var (entidade, id) = AtualizarEntidade.AtualizarCliente();
 
-
-           if (string.IsNullOrWhiteSpace(entidade.Nome))
-            {
-                Console.WriteLine("Erro: Nome do cliente não pode ser vazio.");
-                return clienteAtualizado;
-            }
-
             try
             {
                 var connection = new HortifrutiContext(_connectionString);
@@ -97,24 +90,92 @@ namespace Hortifruti.Repositories
                         }
                     }
 
-                    using (var comando = connection.DbConnection().CreateCommand())
+                    if(!string.IsNullOrWhiteSpace(entidade.Nome) && !string.IsNullOrWhiteSpace(entidade.Cpf) && !string.IsNullOrWhiteSpace(entidade.Telefone))
                     {
-                        comando.CommandText = "UPDATE clientes SET Nome = @nome, CPF = @cpf, Telefone = @telefone WHERE Id = @id";
-                        comando.Parameters.AddWithValue("@id", id);
-                        comando.Parameters.AddWithValue("@nome", entidade.Nome);
-                        comando.Parameters.AddWithValue("@cpf", entidade.Cpf);
-                        comando.Parameters.AddWithValue("@telefone", entidade.Telefone);
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE clientes SET Nome = @nome, CPF = @cpf, Telefone = @telefone WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@nome", entidade.Nome);
+                            comando.Parameters.AddWithValue("@cpf", entidade.Cpf);
+                            comando.Parameters.AddWithValue("@telefone", entidade.Telefone);
 
-                        int linhasAfetadas = comando.ExecuteNonQuery();
-                        if (linhasAfetadas > 0)
-                        {
-                            Console.WriteLine("Dados atualizados com sucesso");
-                            clienteAtualizado.Add(entidade);
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 2)
+                            {
+                                Console.WriteLine("Dados atualizados com sucesso");
+                                clienteAtualizado.Add(entidade);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nenhum dado alterado!");
+                            }
                         }
-                        else
+                    } 
+                    else if (!string.IsNullOrWhiteSpace(entidade.Nome) && string.IsNullOrWhiteSpace(entidade.Cpf) && string.IsNullOrWhiteSpace(entidade.Telefone))
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
                         {
-                            Console.WriteLine("Nenhum dado encontrado");
+                            comando.CommandText = "UPDATE clientes SET Nome = @nome WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@nome", entidade.Nome);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("Nome atualizado com sucesso");
+                                clienteAtualizado.Add(entidade);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nome não alterado");
+                            }
                         }
+                    }
+                    else if (string.IsNullOrWhiteSpace(entidade.Nome) && !string.IsNullOrWhiteSpace(entidade.Cpf) && string.IsNullOrWhiteSpace(entidade.Telefone))
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE clientes SET CPF = @cpf WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@cpf", entidade.Cpf);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("CPF atualizado com sucesso");
+                                clienteAtualizado.Add(entidade);
+                            }
+                            else
+                            {
+                                Console.WriteLine("CPF não alterado!");
+                            }
+                        }
+                    }
+                    else if(string.IsNullOrWhiteSpace(entidade.Nome) && string.IsNullOrWhiteSpace(entidade.Cpf) && !string.IsNullOrWhiteSpace(entidade.Telefone))
+                    {
+                        using (var comando = connection.DbConnection().CreateCommand())
+                        {
+                            comando.CommandText = "UPDATE clientes SET Telefone = @telefone WHERE Id = @id";
+                            comando.Parameters.AddWithValue("@id", id);
+                            comando.Parameters.AddWithValue("@telefone", entidade.Telefone);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+                            if (linhasAfetadas > 0)
+                            {
+                                Console.WriteLine("Telefone atualizado com sucesso");
+                                clienteAtualizado.Add(entidade);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Telefone não alterado!");
+                            }
+                        }
+                    }
+                    else 
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\nNenhum dado inserido!\n\n");
                     }
                 }
             }
@@ -132,6 +193,7 @@ namespace Hortifruti.Repositories
         public List<Cliente> Listar()
         {
             List<Cliente> clientes = new List<Cliente>();
+
             try
             {
                 var connection = new HortifrutiContext(_connectionString);
@@ -172,7 +234,6 @@ namespace Hortifruti.Repositories
         {
           try
             {
-
                 var connection = new HortifrutiContext(_connectionString);
                 using (connection.DbConnection())
                 {
@@ -206,7 +267,7 @@ namespace Hortifruti.Repositories
                             Console.WriteLine("\nCliente removido com sucesso!");
                             return true;
                         }else{
-                            Console.WriteLine("\nCliente não encontrado");
+                            Console.WriteLine("\nCliente não encontrado...");
                             return false;
                         }
                     }

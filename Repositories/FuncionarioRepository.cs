@@ -63,9 +63,7 @@ namespace Hortifruti.Repositories
                 Console.WriteLine("Error geral:" + ex.Message);
                 return (false,0);
             }
-            throw new NotImplementedException();
         }
-
 
         public List<Funcionario> Atualizar()
         {
@@ -75,9 +73,9 @@ namespace Hortifruti.Repositories
 
             try
             {
+                var connection = new HortifrutiContext(_connectionString);
                 if (!string.IsNullOrWhiteSpace(funcionario.Nome) && !string.IsNullOrWhiteSpace(funcionario.Cpf) && !string.IsNullOrWhiteSpace(funcionario.Cargo))
                 {
-                    var connection = new HortifrutiContext(_connectionString);
                     using (connection.DbConnection())
                     {
                         using (var comando = connection.DbConnection().CreateCommand())
@@ -89,21 +87,20 @@ namespace Hortifruti.Repositories
                             comando.Parameters.AddWithValue("@cargo", funcionario.Cargo);
 
                             int linhasAfetadas = comando.ExecuteNonQuery();
-                            if (linhasAfetadas > 0)
+                            if (linhasAfetadas > 2)
                             {
                                 Console.WriteLine("Dados atualizados com sucesso");
                                 funcionarioAtualizado.Add(funcionario);
                             }
                             else
                             {
-                                Console.WriteLine("Nenhum dado encontrado");
+                                Console.WriteLine("Nenhum dado alterado");
                             }
                         }
                     }
                 }
                 else if (!string.IsNullOrWhiteSpace(funcionario.Nome) && string.IsNullOrWhiteSpace(funcionario.Cpf) && string.IsNullOrWhiteSpace(funcionario.Cargo))
                 {
-                    var connection = new HortifrutiContext(_connectionString);
                     using (connection.DbConnection())
                     {
                         using (var comando = connection.DbConnection().CreateCommand())
@@ -120,14 +117,13 @@ namespace Hortifruti.Repositories
                             }
                             else
                             {
-                                Console.WriteLine("Nenhum dado encontrado");
+                                Console.WriteLine("Nome não alterado");
                             }
                         }
                     }
                 }
                 else if (!string.IsNullOrWhiteSpace(funcionario.Cpf) && string.IsNullOrWhiteSpace(funcionario.Nome) && string.IsNullOrWhiteSpace(funcionario.Cargo)) 
                 { 
-                    var connection = new HortifrutiContext(_connectionString);
                     using (connection.DbConnection())
                     {
                         using (var comando = connection.DbConnection().CreateCommand())
@@ -139,19 +135,18 @@ namespace Hortifruti.Repositories
                             int linhasAfetadas = comando.ExecuteNonQuery();
                             if (linhasAfetadas > 0)
                             {
-                                Console.WriteLine("CPF atualizados com sucesso");
+                                Console.WriteLine("CPF atualizado com sucesso");
                                 funcionarioAtualizado.Add(funcionario);
                             }
                             else
                             {
-                                Console.WriteLine("Nenhum dado encontrado");
+                                Console.WriteLine("CPF não alterado");
                             }
                         }
                     }
                 } 
                 else if(!string.IsNullOrWhiteSpace(funcionario.Cargo) && string.IsNullOrWhiteSpace(funcionario.Cpf) && string.IsNullOrWhiteSpace(funcionario.Nome))
                 {
-                    var connection = new HortifrutiContext(_connectionString);
                     using (connection.DbConnection())
                     {
                         using (var comando = connection.DbConnection().CreateCommand())
@@ -163,12 +158,12 @@ namespace Hortifruti.Repositories
                             int linhasAfetadas = comando.ExecuteNonQuery();
                             if (linhasAfetadas > 0)
                             {
-                                Console.WriteLine("Cargo atualizados com sucesso");
+                                Console.WriteLine("Cargo atualizado com sucesso");
                                 funcionarioAtualizado.Add(funcionario);
                             }
                             else
                             {
-                                Console.WriteLine("Nenhum dado encontrado");
+                                Console.WriteLine("Cargo não alterado");
                             }
                         }
                     }
@@ -176,7 +171,7 @@ namespace Hortifruti.Repositories
                 else 
                 {
                     Console.Clear();
-                    Console.WriteLine("\nNenhum dado inserido!\n\n");
+                    Console.WriteLine("\nNenhum dado alterado!\n\n");
                 }
             }
             catch (SQLiteException sqLiteEx)
@@ -205,14 +200,15 @@ namespace Hortifruti.Repositories
                         {
                             while (leitor.Read())
                             {
-                                Funcionario Funcionario = new Funcionario(
-                                    leitor["Nome"].ToString(),
-                                    leitor["Cpf"].ToString(),
-                                    leitor["Cargo"].ToString()
-                                );
-                                funcionarios.Add(Funcionario);
+                                string nome = leitor["Nome"] != DBNull.Value ? leitor["Nome"].ToString() : string.Empty;
+                                string cpf = leitor["Cpf"] != DBNull.Value ? leitor["Cpf"].ToString() : string.Empty;
+                                string cargo = leitor["Cargo"] != DBNull.Value ? leitor["Cargo"].ToString() : string.Empty;
+
+                                Funcionario funcionario = new Funcionario(nome, cpf, cargo);
+                                funcionarios.Add(funcionario);
                             }
                         }
+
                     }
                 }
             }
@@ -249,7 +245,7 @@ namespace Hortifruti.Repositories
                             Console.WriteLine("Funcionario removido com sucesso!");
                             return true;
                         }else{
-                            Console.WriteLine("Funcionario encontrado com id especificado");
+                            Console.WriteLine("Funcionario não encontrado...");
                             return false;
                         }
                     }

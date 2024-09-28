@@ -157,12 +157,6 @@ namespace Hortifruti.Repositories
                             Console.WriteLine("Nenhum dado encontrado");
                         }
                     }
-                    //     using (var comando = connection.DbConnection().CreateCommand()){
-
-                    //     comando.CommandText = "UPDATE vendas SET Total = @total WHERE Id = @vendaId";
-                    //     comando.Parameters.AddWithValue("@total", total);
-                    //     comando.ExecuteNonQuery();
-                    // }
                 }
             }
             catch (SQLiteException sqLiteEx)
@@ -253,10 +247,10 @@ namespace Hortifruti.Repositories
                         int linhasAfetadas = comando.ExecuteNonQuery();
 
                         if(linhasAfetadas>0){
-                            Console.WriteLine("\nCliente removido com sucesso!");
+                            Console.WriteLine("\n Itens Venda removido com sucesso!");
                             return true;
                         }else{
-                            Console.WriteLine("\nCliente não encontrado");
+                            Console.WriteLine("\n Itens Venda não encontrado...");
                             return false;
                         }
                     }
